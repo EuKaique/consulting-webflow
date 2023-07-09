@@ -1,0 +1,10 @@
+.hero-info{
+    background-color: rgba(51, 65, 85, 0.856);
+    width: 45%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 7%;
+}
