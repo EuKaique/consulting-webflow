@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 import InstagramIcon from "../../assets/svg/instagram.svg"
 import FacebookIcon from "../../assets/svg/facebook.svg"
@@ -47,13 +48,19 @@ export const Header = () => {
             <div className="bg-white h-28">
                 <nav className="flex justify-evenly py-8 px-12">
                     <div>
-                        <Image src={Logo} alt="Logo" />
+                        <Link href="/"><Image src={Logo} alt="Logo" /></Link>                 
                     </div>
                     <ul className="flex items-center">
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Home</li>
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">About Us</li>
+                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
+                            <Link href="/">Home</Link>
+                        </li>
+                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
+                            <Link href="/about-us">About Us</Link>
+                        </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Pages</li>
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Services</li>
+                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
+                            <Link href="/our-services">Services</Link>
+                        </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Blog</li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Contact Us</li>
                         <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">

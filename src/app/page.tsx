@@ -2,6 +2,8 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
+import HomePageImage from '../assets/jpeg/HeroHome.jpg'
+
 import './home.css';
 
 export default function Home() {
@@ -9,7 +11,12 @@ export default function Home() {
     <>
       <Header />
       <main>
-        <Hero />
+        <Hero 
+          page="Welcome to Whitecollar" 
+          title="Style Guide" 
+          height="65%"
+          image={HomePageImage}
+        />
         <h2 className="title-class">Color</h2>
         <div className="flex justify-evenly w-11/12 pl-24">
           <div>

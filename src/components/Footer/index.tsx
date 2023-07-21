@@ -68,13 +68,13 @@ export const Footer = () => {
                                     <Link href="/">Home</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">About Us</Link>
+                                    <Link href="/about-us">About Us</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
                                     <Link href="/">Blog</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Services</Link>
+                                    <Link href="/our-services">Services</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
                                     <Link href="/">Contact</Link>

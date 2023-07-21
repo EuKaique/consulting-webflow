@@ -1,0 +1,26 @@
+video{
+    border-radius: 12px;
+}
+
+.video-modal{
+    position: absolute;
+    inset: 40px;
+    background: transparent;
+    padding-right: 20px;
+    width: 80%;
+    height: 99%;
+    margin-left: 8%;
+    text-align: end;
+    margin-top: -1%;
+}
+
+.video-modal > button{
+    padding-top: 0%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    font-size: 32px;
+    font-weight: 700;
+    color: #DDD;
+    z-index: 99999;
+}
