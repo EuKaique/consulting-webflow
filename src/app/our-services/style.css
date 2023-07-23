@@ -1,0 +1,134 @@
+.flex-content{
+    display: flex;
+    margin: 0 8% 5% auto;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.flex-content div{
+    background-color: #F4F4F4;
+    padding: 0.2rem;
+    height: 50%;
+    margin-top: 3%;
+    width: 30%;
+}
+.flex-content h3{
+    width: 60%;
+    padding-left: 2%;
+    margin-bottom: 5%;
+}
+.flex-content > div > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-content img{
+    width: 3.5rem;
+    height: 3.5rem;
+    padding-right: 2%;
+}
+.flex-content span{
+    padding-left: 4%;
+    font-size: small;
+    font-weight: 600;
+    color: #6B78E5;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.info div:first-child{
+    width: 32%;
+}
+.info div:last-child{
+    width: 50%;
+    margin-left: 27%;
+}
+
+.grid-content{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3%;
+}
+.grid-content .box{
+    border: 1px solid #858585;
+    padding: 2rem 4rem;
+    width: 14rem;
+}
+
+.grid-content .box:hover{
+    transition: 0.2s;
+    border-color: #6B78E5;
+    background-color: #6B78E5;
+    cursor: pointer;
+}
+
+.grid-content .box > div{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.grid-content-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.flex-content-2-child{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding-left: 23%;
+}
+.flex-content-2-child img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+.btn{
+    background-color: #6B78E5;
+    color: #FFF;
+    padding: 0.8rem 1rem;
+    font-size: small;
+}
+.btn:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.percent-class{
+    display: flex;
+    align-items: center;
+    background-color: #F4F4F4;
+    padding: 1rem 2rem;
+    margin-right: 26%;
+    margin: 2% 26% 4% 0;
+}
+.percent-class div:first-child{
+    margin-right: 4%;
+}
+
+.testimonial{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 13% 10% auto;
+    border-top: 1px solid rgb(216, 216, 216);
+    width: 78%;
+}
+.testimonial-box{
+    margin-top: 22%;
+    background-color: #F4F4F4;
+    margin-right: 10%;
+    padding: 2rem;
+}
+.testimonial-box:last-child{
+    margin-right: 0;
+}
+.testimonial-box > .box:first-child{
+    display: flex;
+    align-items: center;
+}
+.testimonial-box > .box div:last-child{
+    padding-left: 8%;
+}
