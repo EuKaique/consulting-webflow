@@ -88,7 +88,7 @@ export const Footer = () => {
                                     <Link href="/">Financial Consulting</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Bussiness Management</Link>
+                                    <Link href="/single">Bussiness Management</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
                                     <Link href="/">Consult & Programs</Link>
