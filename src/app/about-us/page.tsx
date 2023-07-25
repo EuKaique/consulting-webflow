@@ -70,7 +70,8 @@ const AboutUs = () => {
             <Header />
             <Hero 
                 page="About Us" 
-                title="Know About Us" 
+                title="Know About Us"
+                text={true} 
                 height="49.8%"
                 image={HeroImage} 
             />

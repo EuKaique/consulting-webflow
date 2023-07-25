@@ -1,18 +1,31 @@
-import Image from "next/image"
-import Link from "next/link"
+"use client";
 
-import InstagramIcon from "../../assets/svg/instagram.svg"
-import FacebookIcon from "../../assets/svg/facebook.svg"
-import TwitterIcon from "../../assets/svg/twitter.svg"
-import PinterestIcon from "../../assets/svg/pinterest.svg"
+import Image from "next/image";
+import Link from "next/link";
 
-import LocalPng from '../../assets/png/localization.png'
-import MailPng from '../../assets/png/mail.png'
-import ClockPng from '../../assets/png/clock.png'
+import InstagramIcon from "../../assets/svg/instagram.svg";
+import FacebookIcon from "../../assets/svg/facebook.svg";
+import TwitterIcon from "../../assets/svg/twitter.svg";
+import PinterestIcon from "../../assets/svg/pinterest.svg";
 
-import Logo from '../../assets/png/logo.png'
+import LocalPng from '../../assets/png/localization.png';
+import MailPng from '../../assets/png/mail.png';
+import ClockPng from '../../assets/png/clock.png';
+
+import Logo from '../../assets/png/logo.png';
+import { useState } from "react";
 
 export const Header = () => {
+    const [open, setOpen] = useState(false)
+    
+    const DropDownOpen = () => {
+        setOpen(true)
+    }
+
+    const DropDownClose = () => {
+        setOpen(false)
+    }
+
     return (
         <header>
             <div className="bg-slate-800 h-12 text-white">
@@ -57,15 +70,26 @@ export const Header = () => {
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <Link href="/about-us">About Us</Link>
                         </li>
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Pages</li>
+                        <li className="text-sm pr-4 cursor-pointer" onMouseEnter={DropDownOpen} onMouseLeave={DropDownClose}>
+                            Pages <span className="text-gray-500">&#11167;</span>
+                            {open && (
+                                <ul>
+                                    <li className="absolute pt-2 hover:opacity-30">
+                                        <Link href="/projects">Projects</Link>
+                                    </li>
+                                </ul>
+                            )}
+                        </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <Link href="/our-services">Services</Link>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Blog</li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Contact Us</li>
-                        <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
-                            <button style={{ color: '#FFF'}}>Get Consulting</button>
-                        </li>
+                        <Link href="/price">
+                            <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
+                                <button style={{ color: '#FFF'}}>Get Consulting</button>
+                            </li>
+                        </Link>
                     </ul>
                 </nav>
             </div>

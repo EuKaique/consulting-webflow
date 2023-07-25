@@ -33,7 +33,13 @@ export default function OurServices(){
     return (
         <>
             <Header />
-            <Hero page="Our Services" title="We're Offering" image={OurService} height="50%"/>
+            <Hero 
+                page="Our Services" 
+                title="We're Offering"
+                text={true} 
+                image={OurService} 
+                height="50%"
+            />
             <section>
                 <h6 className="font-normal pb-2 pt-8 text-center">🟩 Our Services</h6>
                 <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-900 mb-10">We Provide Professional Business Solutions.</h2>

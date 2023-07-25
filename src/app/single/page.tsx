@@ -24,6 +24,7 @@ export default function Single(){
             <Hero 
                 page="About The Services"
                 title="Business Management"
+                text={true}
                 height="49.5%"
                 image={SingleImage}
             />

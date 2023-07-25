@@ -1,0 +1,23 @@
+.grid-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5% auto 10% auto;
+    width: 70%;
+    column-gap: 2%;
+    row-gap: 2%;
+}
+.margin-top{
+    margin-top: -18%;
+}
+.arrow-class{
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+}
+.arrow-class:hover{
+    transition: 0.2s;
+    cursor: pointer;
+    background-color: #6B77E5;
+    color: #F4F4F4;
+    border-radius: 50%;
+    padding: 0.5rem 1rem;
+}
