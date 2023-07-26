@@ -31,10 +31,13 @@ import Twitter from '../../assets/svg/twitter.svg';
 import './style.css';
 import { useState } from "react";
 
-const AboutUs = () => {
+type Props = {
+    id: string
+}
+
+const AboutUs = (prop: Props) => {
     const [visible, setVisible] = useState(false)
-    const [visible2, setVisible2] = useState(false)
-    const [visible3, setVisible3] = useState(false)
+    const [id, setId]           = useState('')
 
     const Play = dynamic(
         () => import('../../components/ButtonPlay'),
@@ -43,26 +46,12 @@ const AboutUs = () => {
 
     const handleMove = () => {
         setVisible(true)
-    }
-
-    const handleMove2 = () => {
-        setVisible2(true)
-    }
-
-    const handleMove3 = () => {
-        setVisible3(true)
+        setId(prop.id)
     }
 
     const handleLeave = () => {
         setVisible(false)
-    }
-
-    const handleLeave2 = () => {
-        setVisible2(false)
-    }
-
-    const handleLeave3 = () => {
-        setVisible3(false)
+        setId('')
     }
     
     return (
@@ -181,8 +170,8 @@ const AboutUs = () => {
                 <h6 className="font-normal pb-2 pt-8 text-center">🟩 Our Team</h6>
                 <h2 className="text-center font-bold text-3xl">Meet Our Experts</h2>
                 <div className="grid-content-4">
-                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave}>
-                        {visible ? (
+                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image1')} >
+                        {visible && id === 'image1' ? (
                             <>
                                     <ul className="socials">
                                         <div>
@@ -219,8 +208,8 @@ const AboutUs = () => {
                             </>
                         )}
                     </div>
-                    <div onMouseEnter={handleMove2} onMouseLeave={handleLeave2}>
-                        {visible2 ? (
+                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image2')}>
+                        {visible && id === 'image2' ? (
                             <>
                                     <ul className="socials">
                                         <div>
@@ -257,8 +246,8 @@ const AboutUs = () => {
                             </>
                         )}
                     </div>
-                    <div onMouseEnter={handleMove3} onMouseLeave={handleLeave3}>
-                        {visible3 ? (
+                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image3')}>
+                        {visible && id === 'image3' ? (
                             <>
                                     <ul className="socials">
                                         <div>
