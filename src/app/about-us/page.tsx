@@ -35,7 +35,7 @@ type Props = {
     id: string
 }
 
-const AboutUs = (prop: Props) => {
+export default function AboutUs(prop: Props){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
@@ -290,5 +290,3 @@ const AboutUs = (prop: Props) => {
         </>
     )
 }
-
-export default AboutUs

@@ -73,12 +73,15 @@ export const Header = () => {
                         <li className="text-sm pr-4 cursor-pointer" onMouseEnter={DropDownOpen} onMouseLeave={DropDownClose}>
                             Pages <span className="text-gray-500">&#11167;</span>
                             {open && (
-                                <ul className="absolute bg-white">
+                                <ul className="absolute bg-white px-4 pb-2">
                                     <li className="pt-2 hover:opacity-30 text-xs">
                                         <Link href="/projects">Projects</Link>
                                     </li>
                                     <li className="pt-2 hover:opacity-30 text-xs">
                                         <Link href="/team">Team</Link>
+                                    </li>
+                                    <li className="pt-2 hover:opacity-30 text-xs">
+                                        <Link href="/faq">FAQ</Link>
                                     </li>
                                 </ul>
                             )}
@@ -89,7 +92,9 @@ export const Header = () => {
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <Link href="/blog">Blog</Link>
                         </li>
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">Contact Us</li>
+                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
+                            <Link href="/contact-us">Contact Us</Link>
+                        </li>
                         <Link href="/price">
                             <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
                                 <button style={{ color: '#FFF'}}>Get Consulting</button>

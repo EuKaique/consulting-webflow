@@ -1,0 +1,30 @@
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box-gray{
+    background-color: #f1f1f1;
+    padding: 0.5rem;
+    width: 60%;
+    max-height: 230px;
+}
+.list-one li{
+    padding: 0.3rem;
+    width: 94%;
+    cursor: pointer;
+}
+.list-one li:hover{
+    background-color: #6B78E5;
+    color: #F4F4F4;
+    transition: 0.2s;
+}
+.active{
+    background-color: #6B78E5;
+    color: #F4F4F4;
+}
+.box-content{
+    margin-left: -30%;
+}

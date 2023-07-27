@@ -1,0 +1,44 @@
+.grid-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: 8% auto 6% auto;
+}
+.border-radius{
+    border-radius: 50%;
+    background-color: #ebebeb;
+    padding: 0.8rem 0.9rem;
+}
+.border-radius img{
+    width: 1.1rem;
+}
+form{
+    width: 70%;
+    margin: 4% auto 10% auto;
+}
+.textfield{
+    background-color: #f1f1f1;
+    border: 1px solid rgb(201, 201, 201);
+    padding: 0.8rem 1rem;
+    width: 49%;
+    margin-bottom: 2%;
+    outline: none;
+}
+textarea{
+    background-color: #f1f1f1;
+    border: 1px solid rgb(201, 201, 201);
+    width: 100%;
+    padding: 0.8rem 1rem;
+    height: 180px;
+    outline: none;
+}
+.btn{
+    background-color: #6B77E5;
+    color: #F4F4F4;
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+}
+.btn:hover{
+    opacity: 0.7;
+    transition: 0.2s;
+}

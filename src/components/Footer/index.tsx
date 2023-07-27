@@ -77,7 +77,7 @@ export const Footer = () => {
                                     <Link href="/our-services">Services</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Contact</Link>
+                                    <Link href="/contact-us">Contact</Link>
                                 </li>
                             </div>
                             <div>
