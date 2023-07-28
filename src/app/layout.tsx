@@ -1,12 +1,20 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import { Poppins } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'] })
+import Logo from '../assets/favicon.ico';
 
-export const metadata = {
-  title: 'Consulting webFlow',
-  description: 'Site para consultores de estilo',
-}
+const poppins = Poppins({ 
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"]
+})
+
+// export const metadata = {
+//   icons: {
+//     icon: Logo
+//   },
+//   title: 'Consulting webFlow',
+//   description: 'Site para consultores de estilo',
+// }
 
 export default function RootLayout({
   children,
@@ -15,7 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+          <link
+            rel="icon"
+            href="/favicon.ico"
+            sizes="any"
+          />
+          <title>Consulting WebFlow</title>
+      </head>
+      <body className={poppins.className}>{children}</body>
     </html>
   )
 }

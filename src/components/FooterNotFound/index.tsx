@@ -9,11 +9,10 @@ import Twitter from '../../assets/svg/twitter.svg'
 import Pinterest from '../../assets/svg/pinterest.svg'
 
 import Image from 'next/image'
-import Link from 'next/link'
 
 import './style.css'
 
-export const Footer = () => {
+export const FooterNotFound = () => {
     return (
         <footer className="bg-slate-900">
             <div className="py-20 px-24">
@@ -65,19 +64,19 @@ export const Footer = () => {
                                     <span>🟪</span><span className="title-link">Quick Link</span>
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Home</Link>
+                                    <a href="/">Home</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/about-us">About Us</Link>
+                                    <a href="/about-us">About Us</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/blog">Blog</Link>
+                                    <a href="/blog">Blog</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/our-services">Services</Link>
+                                    <a href="/our-services">Services</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/contact-us">Contact</Link>
+                                    <a href="/contact-us">Contact</a>
                                 </li>
                             </div>
                             <div>
@@ -85,19 +84,19 @@ export const Footer = () => {
                                     <span>🟪</span><span className="title-link">Our Services</span>
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Financial Consulting</Link>
+                                    <a href="/">Financial Consulting</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/single">Bussiness Management</Link>
+                                    <a href="/single">Bussiness Management</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Consult & Programs</Link>
+                                    <a href="/">Consult & Programs</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Company Management</Link>
+                                    <a href="/">Company Management</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Insurance & Finance</Link>
+                                    <a href="/">Insurance & Finance</a>
                                 </li>
                             </div>
                             <div>
@@ -105,19 +104,19 @@ export const Footer = () => {
                                     <span>🟪</span><span className="title-link">Utility Page</span>
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Style Guide</Link>
+                                    <a href="/">Style Guide</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/licenses">Licenses</Link>
+                                    <a href="/licenses">Licenses</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Instructions</Link>
+                                    <a href="/">Instructions</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/">Changelog</Link>
+                                    <a href="/">Changelog</a>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/not-found">404 Page</Link>
+                                    <a href="/not-found">404 Page</a>
                                 </li>
                             </div>
 
@@ -137,24 +136,24 @@ export const Footer = () => {
                     <ul className="flex">
                         Follow: 
                         <li className="text-white ml-2 socials">
-                            <Link href="/">
+                            <a href="/">
                                 <Image src={Instagram} alt="Instagram"/>
-                            </Link>
+                            </a>
                         </li>
                         <li className="socials">
-                            <Link href="/">
+                            <a href="/">
                                 <Image src={Facebook} alt="Facebook"/>
-                            </Link>
+                            </a>
                         </li>
                         <li className="socials">
-                            <Link href="/">
+                            <a href="/">
                                 <Image src={Twitter} alt="Twitter"/>
-                            </Link>
+                            </a>
                         </li>
                         <li className="socials">
-                            <Link href="/">
+                            <a href="/">
                                 <Image src={Pinterest} alt="Pinterest"/>
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>

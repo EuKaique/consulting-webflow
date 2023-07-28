@@ -1,0 +1,9 @@
+.page-404{
+    background-image: url('../assets/png/404Image.png');
+}
+.btn{
+    background-color: #40DDB6;
+    color: #2C2C2C;
+    font-size: 1rem;
+    padding: 1rem 3rem;
+}

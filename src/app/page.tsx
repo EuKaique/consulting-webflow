@@ -13,7 +13,8 @@ export default function Home() {
       <main>
         <Hero 
           page="Welcome to Whitecollar" 
-          title="Style Guide" 
+          title="Style Guide"
+          text={true} 
           height="65%"
           image={HomePageImage}
         />
