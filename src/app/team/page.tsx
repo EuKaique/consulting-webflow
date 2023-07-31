@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -34,18 +34,6 @@ type Props = {
 export default function Team(prop: Props){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
-    const [reload, setReload]   = useState(false)
-
-    useEffect(() => {
-        setReload(true)
-    },[])
-
-    useEffect(() => {
-        if(reload === true){
-            window.location.href = "/team"
-        }
-        setReload(false)
-    },[])
 
     const handleMove = () => {
         setVisible(true)

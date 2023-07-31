@@ -29,7 +29,7 @@ import Facebook from '../../assets/svg/facebook.svg';
 import Twitter from '../../assets/svg/twitter.svg';
 
 import './style.css';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 type Props = {
     id: string
@@ -38,16 +38,6 @@ type Props = {
 export default function AboutUs(prop: Props){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
-    const [reload, setReload]   = useState(false)
-
-    useEffect(() => {
-        setReload(true)
-        if(reload === true){
-            window.location.href = "/about-us"
-            setReload(false)
-        }
-    },[])
-
 
     const Play = dynamic(
         () => import('../../components/Buttons/ButtonPlay'),
