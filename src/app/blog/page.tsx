@@ -20,7 +20,7 @@ export default function Blog(){
                 page="Recent News"
                 title="We Keep You Updated"
                 text={false}
-                height="50%" 
+                height="71.8%" 
                 image={BlogImage}
             />
             <section>

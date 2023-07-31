@@ -21,7 +21,8 @@ export default function Faq(){
                 page="Quick Solution"
                 title="Frequently Asked Questions"
                 text={false}
-                height="49.8%"
+                height="71.8%"
+                width="47%"
                 image={FAQImage}
             />
             <section className="py-16 grid-content">

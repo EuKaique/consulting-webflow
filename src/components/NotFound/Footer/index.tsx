@@ -1,18 +1,18 @@
-import Phone from '../../assets/png/footer/phone.png'
-import Mail from '../../assets/png/footer/mail.png'
-import Location from '../../assets/png/footer/localization.png'
-import Logo from '../../assets/png/footer/logo.png'
+import Phone from '../../../assets/png/footer/phone.png'
+import Mail from '../../../assets/png/footer/mail.png'
+import Location from '../../../assets/png/footer/localization.png'
+import Logo from '../../../assets/png/footer/logo.png'
 
-import Instagram from '../../assets/svg/instagram.svg'
-import Facebook from '../../assets/svg/facebook.svg'
-import Twitter from '../../assets/svg/twitter.svg'
-import Pinterest from '../../assets/svg/pinterest.svg'
+import Instagram from '../../../assets/svg/instagram.svg'
+import Facebook from '../../../assets/svg/facebook.svg'
+import Twitter from '../../../assets/svg/twitter.svg'
+import Pinterest from '../../../assets/svg/pinterest.svg'
 
 import Image from 'next/image'
 
 import './style.css'
 
-export const FooterNotFound = () => {
+export const Footer = () => {
     return (
         <footer className="bg-slate-900">
             <div className="py-20 px-24">

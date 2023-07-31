@@ -1,3 +1,5 @@
+"use client"
+
 import Phone from '../../assets/png/footer/phone.png'
 import Mail from '../../assets/png/footer/mail.png'
 import Location from '../../assets/png/footer/localization.png'
@@ -14,9 +16,10 @@ import Link from 'next/link'
 import './style.css'
 
 export const Footer = () => {
+
     return (
         <footer className="bg-slate-900">
-            <div className="py-20 px-24">
+            <div className="padding-class">
                 <div className="flex justify-between border-b border-slate-300 w-full pb-6">
                     <div>
                         <Image src={Logo} alt="Logo"/>
@@ -88,7 +91,7 @@ export const Footer = () => {
                                     <Link href="/">Financial Consulting</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <Link href="/single">Bussiness Management</Link>
+                                    <Link href="/single" replace>Bussiness Management</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
                                     <Link href="/">Consult & Programs</Link>
@@ -132,10 +135,9 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between pt-10 text-white text-sm text-slate-300">
+                <div className="copy-class">
                     <span>Copyright &copy; <em className="text-teal-400">WhiteCollar</em> | Designed by <em className="text-purple-400">VictorFlow</em> Templates - Powered by Webflow</span>
                     <ul className="flex">
-                        Follow: 
                         <li className="text-white ml-2 socials">
                             <Link href="/">
                                 <Image src={Instagram} alt="Instagram"/>

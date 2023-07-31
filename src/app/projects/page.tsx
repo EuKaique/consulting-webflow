@@ -26,7 +26,7 @@ export default function Projects(){
                 title="Our Latest Projects"
                 text={false}
                 image={ProjectsImage}
-                height="49.6%"
+                height="71.8%"
             />
             <section>
                 <h6 className="font-semibold pb-2 pt-20 text-center">🟩 Latest Projects</h6>

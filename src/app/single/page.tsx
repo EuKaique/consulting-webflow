@@ -25,7 +25,7 @@ export default function Single(){
                 page="About The Services"
                 title="Business Management"
                 text={true}
-                height="49.5%"
+                height="71.8%"
                 image={SingleImage}
             />
             <section className="grid-content">

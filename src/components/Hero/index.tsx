@@ -1,5 +1,6 @@
+"use client"
+
 import Image from 'next/image'
-import HeroImage from '../../assets/jpeg/Hero.jpg'
 
 import './style.css'
 
@@ -14,8 +15,8 @@ type Props = {
 
 export const Hero = (props: Props) => {
     return (
-        <div>
-            <div className="absolute hero-info" style={{ height: props.height, width: props.width}}>
+        <div className='flex hero-class'>
+            <div className="hero-info" style={{ height: props.height, width: props.width}}>
                 <p className="text-base font-semibold text-white">
                     <span>🟩</span>{props.page}
                 </p>
@@ -27,7 +28,9 @@ export const Hero = (props: Props) => {
                     </span>
                 )}
             </div>
-            <Image src={props.image} alt={props.page} />
+            <div className='absolute'>
+                <Image className="h-image" src={props.image} alt={props.page} style={{ width: '100vw'}} />
+            </div>
         </div>
     )
 }

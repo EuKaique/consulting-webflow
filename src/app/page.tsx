@@ -1,3 +1,5 @@
+"use client"
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -7,6 +9,30 @@ import HomePageImage from '../assets/jpeg/HeroHome.jpg'
 import './home.css';
 
 export default function Home() {
+  let screen = window.innerWidth;
+  let paddingL = '';
+  let widthValue = '';
+
+  if(screen >= 2560){
+    paddingL = 'pl-60';
+    widthValue = 'w-6/12';
+
+  }
+  if(screen >= 1920){
+    paddingL = 'pl-40';
+    widthValue = 'w-8/12';
+
+  }
+  if(screen >= 1600){
+    paddingL = 'pl-32';
+    widthValue = 'w-9/12';
+
+  }
+  else{
+    paddingL = 'pl-24';
+    widthValue = 'w-11/12';
+  }
+
   return (
     <>
       <Header />
@@ -15,11 +41,11 @@ export default function Home() {
           page="Welcome to Whitecollar" 
           title="Style Guide"
           text={true} 
-          height="65%"
+          height="72%"
           image={HomePageImage}
         />
         <h2 className="title-class">Color</h2>
-        <div className="flex justify-evenly w-11/12 pl-24">
+        <div className={`flex justify-evenly ${widthValue} ${paddingL}`}>
           <div>
             <div className="green-div"></div>
             <span className="text-normal font-semibold pl-9">#40DDB6</span>

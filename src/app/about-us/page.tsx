@@ -29,7 +29,7 @@ import Facebook from '../../assets/svg/facebook.svg';
 import Twitter from '../../assets/svg/twitter.svg';
 
 import './style.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Props = {
     id: string
@@ -38,9 +38,19 @@ type Props = {
 export default function AboutUs(prop: Props){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
+    const [reload, setReload]   = useState(false)
+
+    useEffect(() => {
+        setReload(true)
+        if(reload === true){
+            window.location.href = "/about-us"
+            setReload(false)
+        }
+    },[])
+
 
     const Play = dynamic(
-        () => import('../../components/ButtonPlay'),
+        () => import('../../components/Buttons/ButtonPlay'),
         { ssr: false }
     )
 
@@ -61,7 +71,7 @@ export default function AboutUs(prop: Props){
                 page="About Us" 
                 title="Know About Us"
                 text={true} 
-                height="49.8%"
+                height="71.8%"
                 image={HeroImage} 
             />
             <section className="grid-content-1">

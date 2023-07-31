@@ -132,3 +132,49 @@
 .testimonial-box > .box div:last-child{
     padding-left: 8%;
 }
+/* RESPONSIVE */
+@media screen and (min-width: 1600px) {
+    .flex-content{
+        width: 75%;
+        margin: 0 auto 5%;
+    }
+    .info{
+        width: 97%;
+    }
+    .grid-content-2{
+        width: 92%;
+        gap: 5%;
+        margin: 0 auto;
+    }
+    .pl-class{
+        padding-left: 13.8%;
+        width: 100%;
+    }
+    .testimonial{
+        width: 80%;
+        margin: 0 auto 5%;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .flex-content{
+        width: 50%;
+        margin: 0 auto 5%;
+    }
+    .info{
+        width: 96%;
+    }
+    .grid-content-2{
+        width: 77%;
+        gap: 5%;
+        margin: 0 auto;
+    }
+    .pl-class{
+        padding-left: 19.7%;
+        width: 100%;
+    }
+    .testimonial{
+        width: 60%;
+        margin: 0 auto 5%;
+    }
+
+}

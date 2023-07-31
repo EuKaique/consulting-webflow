@@ -21,3 +21,31 @@
     border-radius: 50%;
     padding: 0.5rem 1rem;
 }
+/* RESPONSIVE */
+@media screen and (min-width: 1600px){
+    .grid-content{
+        width: 70%;
+    }
+    .margin-top{
+        margin-top: -14%;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 1920px){
+    .grid-content{
+        width: 70%;
+    }
+    .margin-top{
+        margin-top: -10%;
+        width: 90%;
+    }
+}
+@media screen and (min-width: 2560px){
+    .grid-content{
+        width: 60%;
+    }
+    .margin-top{
+        margin-top: -8%;
+        width: 80%;
+    }
+}

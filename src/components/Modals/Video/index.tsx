@@ -1,9 +1,8 @@
-import React from 'react';
 import Modal from 'react-modal';
 
 import './style.css';
 
-const VideoModal = ({ isOpen, onClose }: any) => {
+const Video = ({ isOpen, onClose }: any) => {
   return (
     <Modal
       isOpen={isOpen}
@@ -19,4 +18,4 @@ const VideoModal = ({ isOpen, onClose }: any) => {
   );
 };
 
-export default VideoModal;
+export default Video;

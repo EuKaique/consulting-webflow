@@ -28,3 +28,19 @@
 .border-right{
     border-right: 1px solid #535353;
 }
+/* RESPONSIVE */
+@media screen and (min-width: 1920px){
+    .grid-content{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .width-max{
+        width: 100%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 2560px){
+    .width-max{
+        width: 96.39%;
+    }
+}

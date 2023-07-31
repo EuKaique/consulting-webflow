@@ -51,3 +51,22 @@
     font-size: 0.9rem;
     padding: 0.5rem;
 }
+.margin-top{
+    margin-top: -17%;
+}
+/* RESPONSIVE */
+@media screen and (min-width: 1600px){
+    .margin-top{
+        margin-top: -14%;
+    }
+}
+@media screen and (min-width: 1920px){
+    .margin-top{
+        margin-top: -11%;
+    }
+}
+@media screen and (min-width: 2560px){
+    .margin-top{
+        margin-top: -8%;
+    }
+}

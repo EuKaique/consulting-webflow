@@ -1,9 +1,23 @@
 .hero-info{
     background-color: rgba(51, 65, 85, 0.856);
     width: 45%;
+    height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 7%;
+    z-index: 10;
+}
+.hero-class{
+    height: 90vh;
+}
+.h-image{
+    height: 64.8vh;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 768px){
+    .hero-info{
+        z-index: 0;
+    }
 }

@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import { useState } from "react";
+
 import InstagramIcon from "../../assets/svg/instagram.svg";
 import FacebookIcon from "../../assets/svg/facebook.svg";
 import TwitterIcon from "../../assets/svg/twitter.svg";
@@ -13,7 +15,9 @@ import MailPng from '../../assets/png/mail.png';
 import ClockPng from '../../assets/png/clock.png';
 
 import Logo from '../../assets/png/logo.png';
-import { useState } from "react";
+
+import './style.css';
+import ButtonMenu from "../Buttons/ButtonMenu";
 
 export const Header = () => {
     const [open, setOpen] = useState(false)
@@ -28,7 +32,7 @@ export const Header = () => {
 
     return (
         <header>
-            <div className="bg-slate-800 h-12 text-white">
+            <div className="bg-slate-800 h-12 text-white hide-class">
                 <div className="flex justify-evenly">
                     <div>
                         <ul className="flex py-4">
@@ -59,11 +63,14 @@ export const Header = () => {
                 </div>
             </div>
             <div className="bg-white h-28">
-                <nav className="flex justify-evenly py-8 px-12">
-                    <div>
-                        <Link href="/"><Image src={Logo} alt="Logo" /></Link>                 
+                <nav className="flex justify-evenly py-8 px-12 items-center">
+                    <div className="flex-header-menu">
+                        <div>
+                            <Link href="/"><Image src={Logo} alt="Logo" /></Link>                 
+                        </div>
+                        <ButtonMenu />
                     </div>
-                    <ul className="flex items-center">
+                    <ul className="flex items-center hide-class">
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <Link href="/">Home</Link>
                         </li>
@@ -73,12 +80,12 @@ export const Header = () => {
                         <li className="text-sm pr-4 cursor-pointer" onMouseEnter={DropDownOpen} onMouseLeave={DropDownClose}>
                             Pages <span className="text-gray-500">&#11167;</span>
                             {open && (
-                                <ul className="absolute bg-white px-4 pb-2">
+                                <ul className="absolute bg-white px-4 pb-2 z-50">
                                     <li className="pt-2 hover:opacity-30 text-xs">
                                         <Link href="/projects">Projects</Link>
                                     </li>
                                     <li className="pt-2 hover:opacity-30 text-xs">
-                                        <Link href="/team">Team</Link>
+                                        <Link href="/team" replace>Team</Link>
                                     </li>
                                     <li className="pt-2 hover:opacity-30 text-xs">
                                         <Link href="/faq">FAQ</Link>
@@ -95,7 +102,7 @@ export const Header = () => {
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <Link href="/contact-us">Contact Us</Link>
                         </li>
-                        <Link href="/price">
+                        <Link href="/price" replace>
                             <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
                                 <button style={{ color: '#FFF'}}>Get Consulting</button>
                             </li>

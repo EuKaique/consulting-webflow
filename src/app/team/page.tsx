@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -34,6 +34,18 @@ type Props = {
 export default function Team(prop: Props){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
+    const [reload, setReload]   = useState(false)
+
+    useEffect(() => {
+        setReload(true)
+    },[])
+
+    useEffect(() => {
+        if(reload === true){
+            window.location.href = "/team"
+        }
+        setReload(false)
+    },[])
 
     const handleMove = () => {
         setVisible(true)
@@ -52,7 +64,8 @@ export default function Team(prop: Props){
                 page="Our Team"
                 title="Meet Our Experts"
                 text={false}
-                height="49.8%"
+                height="71.8%"
+                width="49.5%"
                 image={ImageTeam}
             />
             <section className="grid-content pt-16 pb-24">
@@ -285,7 +298,7 @@ export default function Team(prop: Props){
                         )}
                     </div>
             </section>
-            <section className="grid-content-2 pt-8 pt-16">
+            <section className="grid-content-2 pt-16">
                 <div className="bg-dark text-white">
                     <div className="py-6 px-4">
                         <h6 className="text-sm">🟩 Dedicated Team</h6>
@@ -296,7 +309,7 @@ export default function Team(prop: Props){
                                 <Image src={CircleImage} alt="Year Team"/>
                             </div>
                             <div className="pl-4">
-                                <h2 className="font-semibold text-2xl">75%</h2>
+                                <h2 className="font-semibold text-2xl percent-class">75%</h2>
                                 <h4 className="text-sm">Income Statement</h4>
                                 <p className="text-xs pt-1 font-light">Leverage agile frameworks to provide a robust proposition. </p>
                             </div>

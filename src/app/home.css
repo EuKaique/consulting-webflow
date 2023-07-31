@@ -152,3 +152,15 @@
     min-width: 50%;
     margin-top: 5%;
 }
+
+/* RESPONSIVE */
+@media screen and (min-width: 1280px){
+    .button-class{
+        max-width: 30%;
+    }
+    .blockquotes-class{
+        height: 18rem;
+        padding: 1% 6.5%;
+    }
+    
+}

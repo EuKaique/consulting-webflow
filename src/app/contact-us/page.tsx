@@ -29,7 +29,7 @@ export default function ContactUs(){
                 title="Feel Free Reach Us"
                 text={false}
                 image={ContactImage}
-                height="49.8%"
+                height="71.8%"
             />
             <section className="grid-content">
                 <div>

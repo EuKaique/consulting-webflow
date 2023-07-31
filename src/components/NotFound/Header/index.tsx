@@ -1,21 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-
-import InstagramIcon from "../../assets/svg/instagram.svg";
-import FacebookIcon from "../../assets/svg/facebook.svg";
-import TwitterIcon from "../../assets/svg/twitter.svg";
-import PinterestIcon from "../../assets/svg/pinterest.svg";
-
-import LocalPng from '../../assets/png/localization.png';
-import MailPng from '../../assets/png/mail.png';
-import ClockPng from '../../assets/png/clock.png';
-
-import Logo from '../../assets/png/logo.png';
 import { useState } from "react";
 
-export const HeaderNotFound = () => {
+import Image from "next/image";
+
+import InstagramIcon from "../../../assets/svg/instagram.svg";
+import FacebookIcon from "../../../assets/svg/facebook.svg";
+import TwitterIcon from "../../../assets/svg/twitter.svg";
+import PinterestIcon from "../../../assets/svg/pinterest.svg";
+
+import LocalPng from '../../../assets/png/localization.png';
+import MailPng from '../../../assets/png/mail.png';
+import ClockPng from '../../../assets/png/clock.png';
+
+import Logo from '../../../assets/png/logo.png';
+
+import './style.css';
+import ButtonMenu from "@/components/Buttons/ButtonMenu";
+
+export const Header = () => {
     const [open, setOpen] = useState(false)
     
     const DropDownOpen = () => {
@@ -28,7 +31,7 @@ export const HeaderNotFound = () => {
 
     return (
         <header>
-            <div className="bg-slate-800 h-12 text-white">
+            <div className="bg-slate-800 h-12 text-white hide-class">
                 <div className="flex justify-evenly">
                     <div>
                         <ul className="flex py-4">
@@ -60,10 +63,13 @@ export const HeaderNotFound = () => {
             </div>
             <div className="bg-white h-28">
                 <nav className="flex justify-evenly py-8 px-12">
-                    <div>
-                        <a href="/"><Image src={Logo} alt="Logo" /></a>                 
+                    <div className="flex-header-menu">
+                        <div>
+                            <a href="/"><Image src={Logo} alt="Logo" /></a>                 
+                        </div>
+                        <ButtonMenu />
                     </div>
-                    <ul className="flex items-center">
+                    <ul className="flex items-center hide-class">
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
                             <a href="/">Home</a>
                         </li>

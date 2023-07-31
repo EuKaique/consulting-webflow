@@ -29,3 +29,23 @@
     height: 1.2rem;
     margin-right: 0.2rem;
 }
+.margin-top-1{
+    margin-top: -1%;
+}
+.padding-class{
+    padding: 5% 5%;
+}
+.copy-class{
+    width: 98%;
+    justify-content: space-between;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 2% 0;
+}
+/* RESPONSIVE */
+@media screen and (min-width: 1920px){
+    .copy-class{
+        width: 98.5%;
+    }
+}

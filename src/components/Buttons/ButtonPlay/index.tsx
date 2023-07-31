@@ -2,11 +2,10 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import ReactPlayer from 'react-player';
 
-import VideoModal from '../VideoModal';
+import VideoModal from '../../Modals/Video';
 
-import PlayIcon from '../../assets/svg/icons/play.svg';
+import PlayIcon from '../../../assets/svg/icons/play.svg';
 
 import './style.css';
 

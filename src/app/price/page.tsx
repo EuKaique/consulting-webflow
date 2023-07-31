@@ -14,8 +14,7 @@ export default function Price(){
                 page="Pricing Package"
                 title="Affordable Plans For Customers"
                 text={false}
-                height="65%"
-                width="46%"
+                height="71.8%"
                 image={PriceImage}
             />
             <section>
@@ -43,7 +42,7 @@ export default function Price(){
                             <button className="btn-purple">Get Started</button>
                         </div>
                     </div>
-                    <div style={{marginTop: '-17%'}}>
+                    <div className="margin-top">
                         <div className="bg-emerald-400 py-2 flex justify-center">
                             <h5 className="text-white">Most Popular</h5>
                         </div>

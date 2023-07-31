@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
@@ -30,6 +32,19 @@ import Stars from '../../assets/svg/icons/stars.svg';
 import './style.css';
 
 export default function OurServices(){
+    let screen = window.innerWidth;
+    let widthValue = '';
+
+    if(screen >= 2560){
+        widthValue = 'w-6/12'
+    }
+    if(screen >= 1920){
+        widthValue = 'w-8/12'
+    }
+    else{
+        widthValue = 'w-9/12'
+    }
+
     return (
         <>
             <Header />
@@ -38,7 +53,7 @@ export default function OurServices(){
                 title="We're Offering"
                 text={true} 
                 image={OurService} 
-                height="50%"
+                height="71.8%"
             />
             <section>
                 <h6 className="font-normal pb-2 pt-8 text-center">🟩 Our Services</h6>
@@ -89,7 +104,7 @@ export default function OurServices(){
                 </div>
             </section>
             <section className="bg-slate-800">
-                <div className="mx-auto w-9/12 py-16">
+                <div className={`mx-auto ${widthValue} py-16`}>
                     <div className="info">
                         <div>
                             <h6 className="text-sm pb-2 text-white font-light">🟩 What we're offering</h6>
@@ -132,8 +147,8 @@ export default function OurServices(){
                 </div>
             </section>
             <section>
-                <h6 className="text-sm pb-2 font-semibold pl-40 pt-12">🟩 Why Choose Me</h6>
-                <h3 className="text-2xl font-bold w-4/12 pl-40 pt-2 text-slate-900">We Provide Solutions To Grow Your Business</h3>
+                <h6 className="text-sm pb-2 font-semibold pl-40 pt-12 pl-class">🟩 Why Choose Me</h6>
+                <h3 className="text-2xl font-bold w-4/12 pl-40 pt-2 text-slate-900 pl-class">We Provide Solutions To Grow Your Business</h3>
                 <div className="grid-content-2">
                     <div>
                         <p className="pt-2 leading-normal text-gray-500 font-normal pl-40 pb-8">Leverage agile frameworks to provide a robust synopsis for high level overviews. thinking to further the overall proposition. </p>
