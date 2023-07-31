@@ -27,17 +27,12 @@ import CircleImage from '../../assets/svg/icons/year_team_circle.svg';
 
 import './style.css';
 
-type Props = {
-    id: string
-}
-
-export default function Team(prop: Props){
+export default function Team(){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
     const handleMove = () => {
         setVisible(true)
-        setId(prop.id)
     }
 
     const handleLeave = () => {

@@ -31,11 +31,7 @@ import Twitter from '../../assets/svg/twitter.svg';
 import './style.css';
 import { useState } from "react";
 
-type Props = {
-    id: string
-}
-
-export default function AboutUs(prop: Props){
+export default function AboutUs(){
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
@@ -46,7 +42,6 @@ export default function AboutUs(prop: Props){
 
     const handleMove = () => {
         setVisible(true)
-        setId(prop.id)
     }
 
     const handleLeave = () => {
