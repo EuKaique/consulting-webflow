@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import PriceImage from '../../assets/png/price/PriceImage.png';
 
@@ -11,6 +12,10 @@ import './style.css';
 
 export default function Price(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/price');
+    }, []);
 
     return (
         <>

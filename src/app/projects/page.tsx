@@ -19,9 +19,14 @@ import Calendary from '../../assets/svg/icons/calendary.svg';
 
 import './style.css';
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Projects(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/projects');
+    }, []);
 
     return (
         <>

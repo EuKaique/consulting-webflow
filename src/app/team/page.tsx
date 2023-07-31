@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -30,6 +30,10 @@ import { useRouter } from "next/navigation";
 
 export default function Team(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/team');
+    }, []);
 
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')

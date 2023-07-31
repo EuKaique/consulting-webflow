@@ -29,11 +29,15 @@ import Facebook from '../../assets/svg/facebook.svg';
 import Twitter from '../../assets/svg/twitter.svg';
 
 import './style.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function AboutUs(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/about-us');
+    }, []);
 
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')

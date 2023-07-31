@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import BlogImage from '../../assets/png/blog/BlogImage.png';
 
@@ -17,6 +18,10 @@ import './style.css';
 
 export default function Blog(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/blog');
+    }, []);
 
     return (
         <>

@@ -1,9 +1,16 @@
+"use client";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Licenses(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/licenses');
+    }, []);
 
     return (
         <>

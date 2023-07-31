@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 import HomePageImage from '../assets/jpeg/HeroHome.jpg'
 
@@ -11,6 +12,10 @@ import './home.css';
 
 export default function Home() {
   const router = useRouter();
+
+  useEffect(() => {
+    router.push('/');
+  }, []);
 
   let paddingL = 'pl-24';
   let widthValue = 'w-11/12';

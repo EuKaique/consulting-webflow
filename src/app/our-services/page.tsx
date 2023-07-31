@@ -31,9 +31,14 @@ import Stars from '../../assets/svg/icons/stars.svg';
 
 import './style.css';
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function OurServices(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/our-services');
+    }, []);
 
     let widthValue = 'w-9/12'
 

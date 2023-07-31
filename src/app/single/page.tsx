@@ -19,9 +19,14 @@ import SingleOffice from '../../assets/png/single/SingleOffice.png';
 
 import './style.css';
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Single(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/single');
+    }, []);
 
     return (
         <>

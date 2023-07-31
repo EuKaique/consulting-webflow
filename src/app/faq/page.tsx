@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import FAQImage from '../../assets/png/faq/FaqImage.png';
 
@@ -12,6 +12,10 @@ import './style.css';
 
 export default function Faq(){
     const router = useRouter();
+
+    useEffect(() => {
+        router.push('/faq');
+    }, []);
 
     const [id1, setId1]     = useState(false)
     const [id2, setId2]     = useState(false)
