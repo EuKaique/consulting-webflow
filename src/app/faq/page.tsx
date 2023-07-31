@@ -3,6 +3,7 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import FAQImage from '../../assets/png/faq/FaqImage.png';
@@ -10,13 +11,15 @@ import FAQImage from '../../assets/png/faq/FaqImage.png';
 import './style.css';
 
 export default function Faq(){
+    const router = useRouter();
+
     const [id1, setId1]     = useState(false)
     const [id2, setId2]     = useState(false)
     const [id3, setId3]     = useState(false)
 
     return(
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="Quick Solution"
                 title="Frequently Asked Questions"

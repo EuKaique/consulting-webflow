@@ -3,39 +3,21 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { useRouter } from "next/navigation";
 
 import HomePageImage from '../assets/jpeg/HeroHome.jpg'
 
 import './home.css';
 
 export default function Home() {
-  let screen = window.innerWidth;
-  let paddingL = '';
-  let widthValue = '';
+  const router = useRouter();
 
-  if(screen >= 2560){
-    paddingL = 'pl-60';
-    widthValue = 'w-6/12';
-
-  }
-  if(screen >= 1920){
-    paddingL = 'pl-40';
-    widthValue = 'w-8/12';
-
-  }
-  if(screen >= 1600){
-    paddingL = 'pl-32';
-    widthValue = 'w-9/12';
-
-  }
-  else{
-    paddingL = 'pl-24';
-    widthValue = 'w-11/12';
-  }
+  let paddingL = 'pl-24';
+  let widthValue = 'w-11/12';
 
   return (
     <>
-      <Header />
+      <Header router={router}/>
       <main>
         <Hero 
           page="Welcome to Whitecollar" 

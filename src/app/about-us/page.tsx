@@ -30,8 +30,11 @@ import Twitter from '../../assets/svg/twitter.svg';
 
 import './style.css';
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function AboutUs(){
+    const router = useRouter();
+
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
@@ -51,7 +54,7 @@ export default function AboutUs(){
     
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="About Us" 
                 title="Know About Us"

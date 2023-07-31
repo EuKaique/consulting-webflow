@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
@@ -16,11 +18,14 @@ import RightIcon from '../../assets/svg/icons/right.svg';
 import SingleOffice from '../../assets/png/single/SingleOffice.png';
 
 import './style.css';
+import { useRouter } from "next/navigation";
 
 export default function Single(){
+    const router = useRouter();
+
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="About The Services"
                 title="Business Management"

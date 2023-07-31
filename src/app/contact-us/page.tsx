@@ -15,15 +15,17 @@ import MailIcon from '../../assets/svg/icons/mail_icon.svg';
 import MapIcon from '../../assets/svg/icons/map_icon.svg';
 
 import './style.css';
+import { useRouter } from "next/navigation";
 
 export default function ContactUs(){
+    const router = useRouter();
     const handleSubmit = () => {
         alert('Mensagem enviada com sucesso!')
     }
 
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="Contact Us"
                 title="Feel Free Reach Us"

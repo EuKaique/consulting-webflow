@@ -30,24 +30,16 @@ import Cincinnati from '../../assets/svg/people/cincinnati.svg';
 import Stars from '../../assets/svg/icons/stars.svg';
 
 import './style.css';
+import { useRouter } from "next/navigation";
 
 export default function OurServices(){
-    let screen = window.innerWidth;
-    let widthValue = '';
+    const router = useRouter();
 
-    if(screen >= 2560){
-        widthValue = 'w-6/12'
-    }
-    if(screen >= 1920){
-        widthValue = 'w-8/12'
-    }
-    else{
-        widthValue = 'w-9/12'
-    }
+    let widthValue = 'w-9/12'
 
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="Our Services" 
                 title="We're Offering"

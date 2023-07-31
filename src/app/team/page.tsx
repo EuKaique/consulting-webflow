@@ -26,8 +26,11 @@ import TeamImage from '../../assets/png/team/Team.png';
 import CircleImage from '../../assets/svg/icons/year_team_circle.svg';
 
 import './style.css';
+import { useRouter } from "next/navigation";
 
 export default function Team(){
+    const router = useRouter();
+
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
@@ -42,7 +45,7 @@ export default function Team(){
 
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="Our Team"
                 title="Meet Our Experts"

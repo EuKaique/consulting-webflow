@@ -3,9 +3,9 @@
 import { useState } from 'react';
 
 import './style.css';
-import Menu from '@/components/Modals/Menu';
+import Menu from '@/components/Menu';
 
-function ButtonMenu() {
+function ButtonMenu(router: any) {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -25,7 +25,7 @@ function ButtonMenu() {
                   <p>-</p>
               </button>
           </div>
-            <Menu isOpen={isModalOpen} onClose={handleCloseModal} />
+            <Menu isOpen={isModalOpen} onClose={handleCloseModal} router={router}/>
         </>
     )
 }

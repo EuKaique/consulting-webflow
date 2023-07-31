@@ -1,15 +1,20 @@
+"use client";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { useRouter } from "next/navigation";
 
 import PriceImage from '../../assets/png/price/PriceImage.png';
 
 import './style.css';
 
 export default function Price(){
+    const router = useRouter();
+
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero
                 page="Pricing Package"
                 title="Affordable Plans For Customers"

@@ -1,10 +1,13 @@
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { useRouter } from "next/navigation";
 
 export default function Licenses(){
+    const router = useRouter();
+
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <section>
                 <h5 className="text-center text-sm font-semibold pt-24 pb-4">🟩 Template information</h5>
                 <h2 className="text-center text-5xl pb-6 font-bold">Licencing</h2>

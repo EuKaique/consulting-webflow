@@ -19,7 +19,7 @@ import Logo from '../../assets/png/logo.png';
 import './style.css';
 import ButtonMenu from "../Buttons/ButtonMenu";
 
-export const Header = () => {
+export const Header = (router: any) => {
     const [open, setOpen] = useState(false)
     
     const DropDownOpen = () => {
@@ -68,7 +68,7 @@ export const Header = () => {
                         <div>
                             <Link href="/"><Image src={Logo} alt="Logo" /></Link>                 
                         </div>
-                        <ButtonMenu />
+                        <ButtonMenu router={router}/>
                     </div>
                     <ul className="flex items-center hide-class">
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">

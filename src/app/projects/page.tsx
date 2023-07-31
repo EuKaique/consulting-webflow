@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
@@ -16,11 +18,14 @@ import ConsultEPrograms from '../../assets/png/projects/ConsultEPrograms.png';
 import Calendary from '../../assets/svg/icons/calendary.svg';
 
 import './style.css';
+import { useRouter } from "next/navigation";
 
 export default function Projects(){
+    const router = useRouter();
+
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero 
                 page="The Case Studies"
                 title="Our Latest Projects"

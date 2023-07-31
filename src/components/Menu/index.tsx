@@ -1,13 +1,12 @@
-"use client"
-
 import Link from 'next/link';
+
 import Modal from 'react-modal';
 
 import './style.css';
 
-const Menu = ({ isOpen, onClose }: any) => {
-  let currentPage:any = window.location.href.split('/')[3];
+const Menu = ({ isOpen, onClose, router }: any) => {
 
+  let currentPage = router.pathname;
   let pages = ['', 'about-us','projects', 'team',
       'faq', 'services', 'blog', 'contact-us',
       'price', 'single', 'licenses'

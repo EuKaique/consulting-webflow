@@ -1,7 +1,10 @@
+"use client"
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 import BlogImage from '../../assets/png/blog/BlogImage.png';
 
@@ -13,9 +16,11 @@ import ImageGrid4 from '../../assets/png/blog/ImageGrid4.png';
 import './style.css';
 
 export default function Blog(){
+    const router = useRouter();
+
     return (
         <>
-            <Header />
+            <Header router={router}/>
             <Hero
                 page="Recent News"
                 title="We Keep You Updated"
