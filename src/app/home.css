@@ -154,7 +154,7 @@
 }
 
 /* RESPONSIVE */
-@media screen and (min-width: 425px){
+@media screen and (min-width: 500px){
     .margin-top-5{
         margin-top: -25%;
     }
