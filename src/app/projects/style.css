@@ -22,6 +22,26 @@
     padding: 0.5rem 1rem;
 }
 /* RESPONSIVE */
+@media screen and (min-width: 425px){
+    .page-class{
+        margin-top: -40%;
+    }
+    .text-class{
+        text-align: justify;
+        width: 70%;
+        margin-top: 5%;
+    }
+    .title-class{
+        text-align: center;
+        padding-right: 10%;
+    }
+    .grid-content{
+        display: block;
+    }
+    .grid-content div{
+        margin-bottom: 5%;
+    }
+}
 @media screen and (min-width: 1600px){
     .grid-content{
         width: 70%;

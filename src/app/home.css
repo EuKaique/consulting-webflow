@@ -154,6 +154,23 @@
 }
 
 /* RESPONSIVE */
+@media screen and (min-width: 425px){
+    .margin-top-5{
+        margin-top: -25%;
+    }
+    .colors-class{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 10%;
+    }
+    .blockquotes-class{
+        width: 80%;
+        height: 50%;
+    }
+    .button-class{
+        min-width: 89%;
+    }
+}
 @media screen and (min-width: 1280px){
     .button-class{
         max-width: 30%;
@@ -162,5 +179,4 @@
         height: 18rem;
         padding: 1% 6.5%;
     }
-    
 }

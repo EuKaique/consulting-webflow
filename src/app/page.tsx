@@ -31,8 +31,8 @@ export default function Home() {
           height="72%"
           image={HomePageImage}
         />
-        <h2 className="title-class">Color</h2>
-        <div className={`flex justify-evenly ${widthValue} ${paddingL}`}>
+        <h2 className="title-class margin-top-5">Color</h2>
+        <div className={`flex justify-evenly colors-class ${widthValue} ${paddingL}`}>
           <div>
             <div className="green-div"></div>
             <span className="text-normal font-semibold pl-9">#40DDB6</span>

@@ -22,13 +22,13 @@ export const Hero = (props: Props) => {
                 </p>
                 <h1 className="text-5xl text-white py-5 font-bold">{props.title}</h1>
                 {props.text && (
-                    <span className='text-slate-400 pt-2'>
+                    <span className='text-slate-400 pt-2 text-class'>
                         Collaboratively administrate empowered markets plug <br />
                         and play networks dynamically procrastinated
                     </span>
                 )}
             </div>
-            <div className='absolute'>
+            <div className='absolute image-class'>
                 <Image className="h-image" src={props.image} alt={props.page} style={{ width: '100vw'}} />
             </div>
         </div>

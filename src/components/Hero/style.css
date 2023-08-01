@@ -16,8 +16,26 @@
     height: 64.8vh;
 }
 /* RESPONSIVE */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 425px){
+    .image-class{
+        display: none;
+    }
     .hero-info{
         z-index: 0;
+        width: 100%;
+        padding-left: -15%;
+    }
+    .text-class{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px){
+    .image-class{
+        display: none;
+    }
+    .hero-info{
+        z-index: 0;
+        width: 100%;
+        padding-left: 20%;
     }
 }

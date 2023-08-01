@@ -53,8 +53,8 @@ export default function OurServices(){
                 height="71.8%"
             />
             <section>
-                <h6 className="font-normal pb-2 pt-8 text-center">🟩 Our Services</h6>
-                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-900 mb-10">We Provide Professional Business Solutions.</h2>
+                <h6 className="font-normal pb-2 pt-8 text-center page-class">🟩 Our Services</h6>
+                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-900 mb-10 title-class">We Provide Professional Business Solutions.</h2>
                 <div className="flex-content">
                     <div>
                         <div>
@@ -145,10 +145,10 @@ export default function OurServices(){
             </section>
             <section>
                 <h6 className="text-sm pb-2 font-semibold pl-40 pt-12 pl-class">🟩 Why Choose Me</h6>
-                <h3 className="text-2xl font-bold w-4/12 pl-40 pt-2 text-slate-900 pl-class">We Provide Solutions To Grow Your Business</h3>
+                <h3 className="text-2xl font-bold w-4/12 pl-40 pt-2 text-slate-900 pl-class title-class-2">We Provide Solutions To Grow Your Business</h3>
                 <div className="grid-content-2">
                     <div>
-                        <p className="pt-2 leading-normal text-gray-500 font-normal pl-40 pb-8">Leverage agile frameworks to provide a robust synopsis for high level overviews. thinking to further the overall proposition. </p>
+                        <p className="pt-2 leading-normal text-gray-500 font-normal pl-40 pb-8 p-first">Leverage agile frameworks to provide a robust synopsis for high level overviews. thinking to further the overall proposition. </p>
                         <div className="flex-content-2-child">
                             <div className="box">
                                 <div className="flex">

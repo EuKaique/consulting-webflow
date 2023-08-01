@@ -55,7 +55,6 @@ export default function Team(){
                 title="Meet Our Experts"
                 text={false}
                 height="71.8%"
-                width="49.5%"
                 image={ImageTeam}
             />
             <section className="grid-content pt-16 pb-24">

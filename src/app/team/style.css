@@ -56,6 +56,32 @@
     background-color: #37393F;
 }
 /* RESPONSIVE */
+@media screen and (min-width: 425px){
+    .grid-content{
+        display: block;
+        margin-top: -35%;
+    }
+    .grid-content div{
+        margin-bottom: 25%;
+    }
+    .socials{
+        margin-bottom: -75%;
+        margin-top: 65%;
+    }
+    .grid-content .box-people{
+        margin-top: -60%;
+        margin-bottom: 20%;
+    }
+    .grid-content .box-people:nth-child(2){
+        margin-top: -35%;
+        margin-bottom: 20%;
+    }
+    .grid-content-2{
+        display: block;
+        margin-top: -25%;
+        margin-bottom: 10%;
+    }
+}
 @media screen and (min-width: 1920px){
     .grid-content-2{
         width: 60%;

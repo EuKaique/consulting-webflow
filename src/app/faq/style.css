@@ -28,3 +28,21 @@
 .box-content{
     margin-left: -30%;
 }
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .grid-content{
+        display: block;
+    }
+    .box-gray{
+        width: 100%;
+        margin-bottom: 25%;
+        margin-top: -50%;
+    }
+    .box-content{
+        margin-left: -28%;
+        min-width: 400px;
+    }
+    .box-content div{
+        font-size: 0.9rem;
+    }
+}

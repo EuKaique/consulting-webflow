@@ -133,6 +133,90 @@
     padding-left: 8%;
 }
 /* RESPONSIVE */
+@media screen and (min-width: 425px) {
+    .page-class{
+        margin-top: -25%;
+    }
+    .title-class{
+        width: 100%;
+    }
+    .flex-content{
+        display: block;
+    }
+    .flex-content div{
+        width: 100%;
+        margin-bottom: 7%;
+    }
+    .info{
+        display: block;
+    }
+    .info div{
+        width: 100%;
+    }
+    .info h6{
+        width: 100vw;
+        padding-left: 75%;
+        margin-top: -25%;
+        padding-bottom: 20%;
+    }
+    .info h3{
+        width: 100vw;
+        margin: -15% 0 25% -35%;
+        font-size: 1.15rem;
+    }
+    .info p{
+        width: 91vw;
+        margin-left: -75%;
+        font-size: 0.75rem;
+        text-align: justify;
+    }
+    .grid-content{
+        display: flex;
+        width: 100vw;
+        flex-wrap: wrap;
+        margin-left: -10%;
+        margin-bottom: -10%;
+        margin-top: 10%;
+    }
+    .grid-content .box{
+        width: 43.5%;
+        margin-bottom: 5%;
+        padding: 10% 0;
+    }
+    .grid-content .box h4{
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .title-class-2{
+        width: 100vw;
+        margin-left: -14%;
+        font-size: 1.4rem;
+        margin-bottom: 10%;
+    }
+    .grid-content-2{
+        display: block;
+        width: 100vw;
+    }
+    .grid-content-2 .p-first{
+        padding-left: 5%;
+        padding-right: 4%;
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    .flex-content-2-child{
+        margin-left: -12%;
+    }
+    .percent-class{
+        width: 90%;
+        margin: 0 auto 5%;
+    }
+    .percent-class div{
+        margin-bottom: 5%;
+    }
+    .testimonial{
+        display: block;
+    }
+}
 @media screen and (min-width: 1600px) {
     .flex-content{
         width: 75%;

@@ -39,9 +39,9 @@ export default function Projects(){
                 height="71.8%"
             />
             <section>
-                <h6 className="font-semibold pb-2 pt-20 text-center">🟩 Latest Projects</h6>
-                <h2 className="text-center font-bold text-3xl mx-auto text-slate-800">Discover our latest client projects</h2>
-                <p className="text-center text-gray-500 py-2 w-7/12 mx-auto text-sm ">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking to further the overal.</p>
+                <h6 className="font-semibold pb-2 pt-20 text-center page-class">🟩 Latest Projects</h6>
+                <h2 className="text-center font-bold text-3xl mx-auto text-slate-800 title-class">Discover our latest client projects</h2>
+                <p className="text-center text-gray-500 py-2 w-7/12 mx-auto text-sm text-class">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking to further the overal.</p>
                 <div className="grid-content">
                     <div className="mb-2">
                         <Image src={FinancialInvestment} alt="Financial Investment"/>
