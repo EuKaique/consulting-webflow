@@ -1,84 +1,45 @@
 .menu-hamburguer{
     display: none;
+    margin-top: -3.2rem;
+}
+.menu-hamburguer p{
+    height: 0.5rem;
+    font-size: 3.6rem;
+    border-radius: 0.5rem;
+}
+.menu-hamburguer p:first-child{
+    margin-right: -1.4rem;
+}
+.menu-hamburguer p:nth-child(2){
+    margin-right: -1rem;
+}
+.menu-hamburguer p:last-child{
+    margin-right: -0.5rem;
+}
+.menu-hamburguer p:first-child,
+.menu-hamburguer p:nth-child(2){
+    color: #40DDB6;
+}
+.menu-hamburguer p:last-child{
+    color: #6B78E5;
 }
 /* RESPONSIVE */
-@media screen and (max-width: 425px){
-    header{
-        overflow-x: hidden;
-        min-width: 425px;
+@media screen and (max-width: 360px){
+    .menu-hamburguer{
+        display: block;
     }
     .hide-class{
         display: none;
-    }
-    .menu-hamburguer{
-        display: block;
-        margin-top: -3.2rem;
-    }
-    .menu-hamburguer p{
-        height: 0.5rem;
-        font-size: 3.6rem;
-        border-radius: 0.5rem;
-    }
-    .menu-hamburguer p:first-child{
-        margin-right: -1.4rem;
-    }
-    .menu-hamburguer p:nth-child(2){
-        margin-right: -1rem;
-    }
-    .menu-hamburguer p:last-child{
-        margin-right: -0.5rem;
-    }
-    .menu-hamburguer p:first-child,
-    .menu-hamburguer p:nth-child(2){
-        color: #40DDB6;
-    }
-    .menu-hamburguer p:last-child{
-        color: #6B78E5;
-    }
-    .flex-header-menu{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 2%;
-    }
-}
-@media screen and (max-width: 768px){
-    header{
-        overflow-x: hidden;
-    }
-    .hide-class{
-        display: none;
-    }
-    .menu-hamburguer{
-        display: block;
-        margin-top: -3.2rem;
-    }
-    .menu-hamburguer p{
-        height: 0.5rem;
-        font-size: 3.6rem;
-        border-radius: 0.5rem;
-    }
-    .menu-hamburguer p:first-child{
-        margin-right: -1.4rem;
-    }
-    .menu-hamburguer p:nth-child(2){
-        margin-right: -1rem;
-    }
-    .menu-hamburguer p:last-child{
-        margin-right: -0.5rem;
-    }
-    .menu-hamburguer p:first-child,
-    .menu-hamburguer p:nth-child(2){
-        color: #40DDB6;
-    }
-    .menu-hamburguer p:last-child{
-        color: #6B78E5;
     }
     .flex-header-menu{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 0 2%;
+    }
+}
+@media screen and (max-width: 425px){
+    .hide-class{
+        display: none;
     }
 }

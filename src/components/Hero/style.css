@@ -16,26 +16,32 @@
     height: 64.8vh;
 }
 /* RESPONSIVE */
-@media screen and (max-width: 425px){
+@media screen and (max-width: 360px){
     .image-class{
         display: none;
     }
     .hero-info{
         z-index: 0;
         width: 100%;
-        padding-left: -15%;
+        padding-left: 15%;
     }
     .text-class{
         width: 80%;
     }
+    .hero-class h1{
+        font-size: 2.4rem;
+    }
 }
-@media screen and (max-width: 768px){
+@media screen and (min-width: 361px) and (max-width: 425px) {
     .image-class{
         display: none;
     }
     .hero-info{
         z-index: 0;
         width: 100%;
-        padding-left: 20%;
+        padding-left: 15%;
+    }
+    .hero-class h1{
+        font-size: 2.4rem;
     }
 }

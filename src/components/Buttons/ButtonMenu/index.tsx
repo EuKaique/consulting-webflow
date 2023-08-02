@@ -17,16 +17,14 @@ function ButtonMenu(router: any) {
     };
     
     return ( 
-        <>
-          <div>
-              <button className="menu-hamburguer" onClick={handleOpenModal}>
-                  <p>-</p>
-                  <p>-</p>
-                  <p>-</p>
-              </button>
-          </div>
-            <Menu isOpen={isModalOpen} onClose={handleCloseModal} router={router}/>
-        </>
+        <div>
+            <button className="menu-hamburguer" onClick={handleOpenModal}>
+                <p>-</p>
+                <p>-</p>
+                <p>-</p>
+            </button>
+          <Menu isOpen={isModalOpen} onClose={handleCloseModal} router={router}/>
+        </div>
     )
 }
 

@@ -154,6 +154,24 @@
 }
 
 /* RESPONSIVE */
+@media screen and (max-width: 360px){
+    .margin-top-5{
+        margin-top: -25%;
+    }
+    .colors-class{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-left: 10%;
+        column-gap: 0.5rem;
+    }
+    .blockquotes-class{
+        width: 80%;
+        height: 50%;
+    }
+    .button-class{
+        min-width: 91.8%;
+    }
+}
 @media screen and (max-width: 425px){
     .margin-top-5{
         margin-top: -25%;
@@ -162,6 +180,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-left: 10%;
+        column-gap: 0.5rem;
     }
     .blockquotes-class{
         width: 80%;
