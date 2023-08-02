@@ -22,7 +22,7 @@
     padding: 0.5rem 1rem;
 }
 /* RESPONSIVE */
-@media screen and (min-width: 425px){
+@media screen and (max-width: 425px){
     .page-class{
         margin-top: -40%;
     }
