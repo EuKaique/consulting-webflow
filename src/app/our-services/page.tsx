@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
@@ -31,16 +29,13 @@ import Stars from '../../assets/svg/icons/stars.svg';
 
 import './style.css';
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function OurServices(){
     const router = useRouter();
 
-    useEffect(() => {
-        setTimeout(() => {
-            router.refresh();
-        },2500)
-    }, []);
+    setTimeout(() => {
+        router.refresh();
+    },3000)
 
     let widthValue = 'w-9/12'
 

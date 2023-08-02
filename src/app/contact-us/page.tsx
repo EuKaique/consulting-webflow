@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { Footer } from "@/components/Footer";
@@ -16,14 +14,13 @@ import MapIcon from '../../assets/svg/icons/map_icon.svg';
 
 import './style.css';
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function ContactUs(){
     const router = useRouter();
 
-    useEffect(() => {
-        router.push('/contact-us');
-    }, []);
+    setTimeout(() => {
+        router.refresh();
+    }, 3000);
 
     const handleSubmit = () => {
         alert('Mensagem enviada com sucesso!')

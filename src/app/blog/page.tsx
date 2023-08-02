@@ -1,5 +1,3 @@
-"use client"
-
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -19,9 +17,9 @@ import './style.css';
 export default function Blog(){
     const router = useRouter();
 
-    useEffect(() => {
-        router.push('/blog');
-    }, []);
+    setTimeout(() => {
+        router.refresh();
+    }, 3000);
 
     return (
         <>
