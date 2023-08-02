@@ -7,3 +7,16 @@
     font-size: 1rem;
     padding: 1rem 3rem;
 }
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .page-404 h1{
+        font-size: 6rem;
+    }
+    .page-404 h2{
+        font-size: 2rem;
+    }
+    .page-404 p{
+        width: 100%;
+        padding: 4% 2%;
+    }
+}

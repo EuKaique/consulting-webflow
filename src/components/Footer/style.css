@@ -47,7 +47,7 @@
     padding: 2% 0;
 }
 /* RESPONSIVE */
-@media screen and (min-width: 425px){
+@media screen and (max-width: 425px){
     .padding-class .footer-class-1{
         flex-wrap: wrap;
     }

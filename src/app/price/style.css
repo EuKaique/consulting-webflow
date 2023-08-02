@@ -55,6 +55,24 @@
     margin-top: -17%;
 }
 /* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .page-class{
+        margin-top: -35%;
+    }
+    .title-class{
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    .grid-content{
+        display: block;
+    }
+    .grid-content div:nth-child(2){
+        margin-bottom: 10%;
+    }
+    .margin-top{
+        margin-top: 20%;
+    }
+}
 @media screen and (min-width: 1600px){
     .margin-top{
         margin-top: -14%;

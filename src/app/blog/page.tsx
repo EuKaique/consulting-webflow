@@ -34,8 +34,8 @@ export default function Blog(){
                 image={BlogImage}
             />
             <section>
-                <h6 className="font-semibold pb-2 pt-20 text-center">🟩 Our Recent News</h6>
-                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 pb-8">Featured News And Insights</h2>
+                <h6 className="font-semibold pb-2 pt-20 text-center page-class">🟩 Our Recent News</h6>
+                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 pb-8 title-class">Featured News And Insights</h2>
                 <div className="grid-content">
                     <div>
                         <Image src={ImageGrid1} alt="Image 1" />

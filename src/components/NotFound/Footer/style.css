@@ -1,3 +1,6 @@
+.flex-class-1{
+    display: flex;
+}
 .border-radius-50{
     border-radius: 50%;
 }
@@ -23,9 +26,77 @@
 .btn-footer:hover{
     opacity: 0.9;
 }
-.socials img{
+.socials-footer img{
     filter: invert(80%);
     width: 1.2rem;
     height: 1.2rem;
     margin-right: 0.2rem;
+}
+.margin-top-1{
+    margin-top: -1%;
+}
+.padding-class{
+    padding: 5% 5%;
+}
+.copy-class{
+    width: 98%;
+    justify-content: space-between;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    padding: 2% 0;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .padding-class .footer-class-1{
+        flex-wrap: wrap;
+    }
+    .padding-class .footer-class-1 ul{
+        flex-wrap: wrap;
+        padding: 5% 0;
+    }
+    .padding-class .footer-class-1 ul li div{
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+    }
+    .padding-class .footer-class-1 ul li div:last-child{
+        margin-right: 0.5rem;
+    }
+    .flex-class{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    .box-gray{
+        display: block;
+    }
+    .ul-class{
+        margin-bottom: 5%;
+    }
+    .flex-class-1{
+        display: block;
+    }
+    .title-link{
+        margin-right: 0;
+    }
+    .copy-class{
+        flex-direction: column;
+    }
+    .copy-class div:first-child{
+        margin-top: 3%;
+    }
+    .copy-class ul{
+        margin-top: 10%;
+        margin-bottom: 0;
+    }
+    .copy-class span{
+        font-size: 0.55rem;
+    }
+}
+@media screen and (min-width: 1920px){
+    .copy-class{
+        width: 98.5%;
+    }
 }

@@ -28,8 +28,8 @@ export default function Price(){
                 image={PriceImage}
             />
             <section>
-                <h6 className="font-semibold pb-2 pt-20 text-center">🟩 Single Pricing Option</h6>
-                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800">Choose the Right Plan for Your and Your Team</h2>
+                <h6 className="font-semibold pb-2 pt-20 text-center page-class">🟩 Single Pricing Option</h6>
+                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 title-class">Choose the Right Plan for Your and Your Team</h2>
                 <div className="grid-content">
                     <div>
                         <h3 className="text-center text-lg font-bold">Basic</h3>

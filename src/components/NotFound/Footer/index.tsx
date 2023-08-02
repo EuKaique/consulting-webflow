@@ -1,3 +1,5 @@
+"use client"
+
 import Phone from '../../../assets/png/footer/phone.png'
 import Mail from '../../../assets/png/footer/mail.png'
 import Location from '../../../assets/png/footer/localization.png'
@@ -13,10 +15,11 @@ import Image from 'next/image'
 import './style.css'
 
 export const Footer = () => {
+
     return (
         <footer className="bg-slate-900">
-            <div className="py-20 px-24">
-                <div className="flex justify-between border-b border-slate-300 w-full pb-6">
+            <div className="padding-class">
+                <div className="flex justify-between border-b border-slate-300 w-full pb-6 footer-class-1">
                     <div>
                         <Image src={Logo} alt="Logo"/>
                     </div>
@@ -56,12 +59,12 @@ export const Footer = () => {
                         </li>
                     </ul>
                 </div>
-                <div className="pt-6 flex border-b pb-6">
-                    <ul className="w-full">
-                        <div className='flex'>
+                <div className="pt-6 flex-class-1 border-b pb-6">
+                    <ul className="w-full ul-class">
+                        <div className='flex flex-class'>
                             <div>
-                                <li>
-                                    <span>🟪</span><span className="title-link">Quick Link</span>
+                                <li className="title-link">
+                                    🟪 Quick link
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
                                     <a href="/">Home</a>
@@ -131,31 +134,34 @@ export const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between pt-10 text-white text-sm text-slate-300">
-                    <span>Copyright &copy; <em className="text-teal-400">WhiteCollar</em> | Designed by <em className="text-purple-400">VictorFlow</em> Templates - Powered by Webflow</span>
-                    <ul className="flex">
-                        Follow: 
-                        <li className="text-white ml-2 socials">
-                            <a href="/">
-                                <Image src={Instagram} alt="Instagram"/>
-                            </a>
-                        </li>
-                        <li className="socials">
-                            <a href="/">
-                                <Image src={Facebook} alt="Facebook"/>
-                            </a>
-                        </li>
-                        <li className="socials">
-                            <a href="/">
-                                <Image src={Twitter} alt="Twitter"/>
-                            </a>
-                        </li>
-                        <li className="socials">
-                            <a href="/">
-                                <Image src={Pinterest} alt="Pinterest"/>
-                            </a>
-                        </li>
-                    </ul>
+                <div className="copy-class">
+                    <div>
+                        <span>Copyright &copy; <em className="text-teal-400">WhiteCollar</em> | Designed by <em className="text-purple-400">VictorFlow</em> Templates - Powered by Webflow</span>
+                    </div>
+                    <div>
+                        <ul className="flex">
+                            <li className="text-white ml-2 socials-footer">
+                                <a href="/">
+                                    <Image src={Instagram} alt="Instagram"/>
+                                </a>
+                            </li>
+                            <li className="socials-footer">
+                                <a href="/">
+                                    <Image src={Facebook} alt="Facebook"/>
+                                </a>
+                            </li>
+                            <li className="socials-footer">
+                                <a href="/">
+                                    <Image src={Twitter} alt="Twitter"/>
+                                </a>
+                            </li>
+                            <li className="socials-footer">
+                                <a href="/">
+                                    <Image src={Pinterest} alt="Pinterest"/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </footer>

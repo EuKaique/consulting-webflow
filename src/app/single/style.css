@@ -51,3 +51,21 @@
 .box-green{
     background-image: url('../../assets//png/single/greenImage.png');
 }
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .grid-content{
+        display: block;
+    }
+    .box-gray{
+        background-color: #F4F4F4;
+        padding: 2rem 1rem;
+        margin-bottom: 2rem;
+        margin-top: -45%;
+    }
+    .box-gray:nth-child(2){
+        margin-top: 10%;
+    }
+    .btn{
+        width: 100%;
+    }
+}
