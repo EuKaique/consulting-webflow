@@ -88,7 +88,9 @@ export default function ContactUs(){
                         <input className="textfield" type="text" name="phone" id="phone" placeholder="Phone number" required/>
                         <input className="textfield" type="text" name="subject" id="subject" placeholder="Subject" required/>
                     </div>
-                    <textarea name="message" id="message" placeholder="Message..."></textarea>
+                    <div className="w-full">
+                        <textarea name="message" id="message" placeholder="Message..."></textarea>
+                    </div>
                     <div className="flex justify-center pt-6">
                         <button className="btn" type="submit">Submit</button>
                     </div>

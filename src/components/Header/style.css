@@ -42,4 +42,13 @@
     .hide-class{
         display: none;
     }
+    .menu-hamburguer{
+        display: block;
+    }
+    .flex-header-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
 }

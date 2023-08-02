@@ -14,7 +14,9 @@ export default function Price(){
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/price');
+        setTimeout(() => {
+            router.refresh();
+        },2500)
     }, []);
 
     return (

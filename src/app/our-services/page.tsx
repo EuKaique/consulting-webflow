@@ -37,7 +37,9 @@ export default function OurServices(){
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/our-services');
+        setTimeout(() => {
+            router.refresh();
+        },2500)
     }, []);
 
     let widthValue = 'w-9/12'
