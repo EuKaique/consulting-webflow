@@ -169,7 +169,7 @@
         height: 50%;
     }
     .button-class{
-        min-width: 91.8%;
+        min-width: 92%;
     }
 }
 @media screen and (max-width: 425px){
@@ -185,9 +185,6 @@
     .blockquotes-class{
         width: 80%;
         height: 50%;
-    }
-    .button-class{
-        min-width: 89%;
     }
 }
 @media screen and (min-width: 1280px){

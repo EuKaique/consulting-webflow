@@ -72,6 +72,9 @@
     .box-gray{
         display: block;
     }
+    input{
+        min-width: 60%;
+    }
     .ul-class{
         margin-bottom: 5%;
     }
@@ -119,6 +122,9 @@
     }
     .box-gray{
         display: block;
+    }
+    input{
+        width: 60%;
     }
     .ul-class{
         margin-bottom: 5%;
