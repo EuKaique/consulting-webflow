@@ -1,3 +1,5 @@
+"use client";
+
 import { Footer } from "@/components/NotFound/Footer";
 import { Header } from "@/components/NotFound/Header";
 import { useRouter } from "next/navigation";
