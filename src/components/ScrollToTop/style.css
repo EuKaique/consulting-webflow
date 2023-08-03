@@ -11,3 +11,9 @@
     width: 2.2rem;
     height: 2.2rem;
 }
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+    .btn-top-class{
+        left: 83%;
+    } 
+}
