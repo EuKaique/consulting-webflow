@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
 import OurService from '../../assets/png/ourServices/OurServices.png';
@@ -30,20 +28,13 @@ import Cincinnati from '../../assets/svg/people/cincinnati.svg';
 import Stars from '../../assets/svg/icons/stars.svg';
 
 import './style.css';
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function OurServices(){
-    const router = useRouter();
-
-    setTimeout(() => {
-        router.refresh();
-    },3000)
-
     let widthValue = 'w-9/12'
 
     return (
         <>
-            <Header router={router}/>
             <Hero 
                 page="Our Services" 
                 title="We're Offering"
@@ -51,6 +42,7 @@ export default function OurServices(){
                 image={OurService} 
                 height="71.8%"
             />
+            <ScrollToTop />
             <section>
                 <h6 className="font-normal pb-2 pt-8 text-center page-class">🟩 Our Services</h6>
                 <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-900 mb-10 title-class">We Provide Professional Business Solutions.</h2>
@@ -247,7 +239,6 @@ export default function OurServices(){
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

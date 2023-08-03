@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
 import SingleImage from '../../assets/png/single/Single.png';
@@ -18,18 +16,11 @@ import RightIcon from '../../assets/svg/icons/right.svg';
 import SingleOffice from '../../assets/png/single/SingleOffice.png';
 
 import './style.css';
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Single(){
-    const router = useRouter();
-
-    setTimeout(() => {
-        router.refresh();
-    }, 3000);
-
     return (
         <>
-            <Header router={router}/>
             <Hero 
                 page="About The Services"
                 title="Business Management"
@@ -37,6 +28,7 @@ export default function Single(){
                 height="71.8%"
                 image={SingleImage}
             />
+            <ScrollToTop />
             <section className="grid-content">
                 <div>
                     <div className="box-gray">
@@ -84,7 +76,9 @@ export default function Single(){
                         <h2 className="font-bold text-2xl text-white text-center">any help?</h2>
                         <p className="text-center pt-2 pb-8 w-8/12 text-sm text-slate-800 mx-auto">Leverage agile frameworks to provide a robust synopsis for high level.</p>
                         <div className="flex justify-center">
-                            <button className="btn-2">Contact Us</button>
+                            <a href="/contact-us">
+                                <button className="btn-2">Contact Us</button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +120,6 @@ export default function Single(){
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

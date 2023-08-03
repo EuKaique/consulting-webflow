@@ -36,14 +36,13 @@
 .socials{
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 45%;
     left: 30%;
     top: 50%;
     z-index: 99999;
 }
 .socials li{
-    color: #FFF;
     font-weight: bold;
     background-color: #1fc098;
     display: flex;
@@ -51,6 +50,13 @@
     border-radius: 50%;
     padding: 0.2rem 0.2rem 0.2rem 0.4rem;
     cursor: pointer;
+}
+.socials li:first-child{
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+}
+.socials img{
+    filter: invert(1);
+    width: 1.4rem;
 }
 .bg-dark{
     background-color: #37393F;

@@ -3,8 +3,8 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
+import { useState } from "react";
+
 import { Hero } from "@/components/Hero";
 
 import HeroImage from '../../assets/jpeg/HeroAbout.jpg';
@@ -29,16 +29,9 @@ import Facebook from '../../assets/svg/facebook.svg';
 import Twitter from '../../assets/svg/twitter.svg';
 
 import './style.css';
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function AboutUs(){
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push('/about-us');
-    }, []);
-
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
 
@@ -58,7 +51,6 @@ export default function AboutUs(){
     
     return (
         <>
-            <Header router={router}/>
             <Hero 
                 page="About Us" 
                 title="Know About Us"
@@ -66,6 +58,7 @@ export default function AboutUs(){
                 height="71.8%"
                 image={HeroImage} 
             />
+            <ScrollToTop />
             <section className="grid-content-1">
                 <aside className="bg-slate-200">
                     <div className="px-24 py-16">
@@ -288,7 +281,6 @@ export default function AboutUs(){
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

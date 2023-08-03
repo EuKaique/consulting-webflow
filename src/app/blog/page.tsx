@@ -1,10 +1,8 @@
 "use client";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+
+import { Hero } from "@/components/Hero";
 
 import BlogImage from '../../assets/png/blog/BlogImage.png';
 
@@ -14,17 +12,12 @@ import ImageGrid3 from '../../assets/png/blog/ImageGrid3.png';
 import ImageGrid4 from '../../assets/png/blog/ImageGrid4.png';
 
 import './style.css';
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Blog(){
-    const router = useRouter();
-
-    setTimeout(() => {
-        router.refresh();
-    }, 3000);
 
     return (
         <>
-            <Header router={router}/>
             <Hero
                 page="Recent News"
                 title="We Keep You Updated"
@@ -32,9 +25,10 @@ export default function Blog(){
                 height="71.8%" 
                 image={BlogImage}
             />
+            <ScrollToTop />
             <section>
-                <h6 className="font-semibold pb-2 pt-20 text-center page-class">🟩 Our Recent News</h6>
-                <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 pb-8 title-class">Featured News And Insights</h2>
+                <h6 className="font-semibold pb-2 text-center page-class text-slate-800">🟩 Our Recent News</h6>
+                <h2 className="text-slate-800 text-center pb-8 text-3xl font-semibold title-class">Featured News And Insights</h2>
                 <div className="grid-content">
                     <div>
                         <Image src={ImageGrid1} alt="Image 1" />
@@ -89,7 +83,6 @@ export default function Blog(){
                     <button className="btn font-light hover:opacity-75">Next &#10095;</button>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

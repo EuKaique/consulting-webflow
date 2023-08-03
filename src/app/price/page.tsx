@@ -1,24 +1,15 @@
 "use client";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 import PriceImage from '../../assets/png/price/PriceImage.png';
 
 import './style.css';
 
 export default function Price(){
-    const router = useRouter();
-
-    setTimeout(() => {
-        router.refresh();
-    },3000)
-
     return (
         <>
-            <Header router={router}/>
             <Hero
                 page="Pricing Package"
                 title="Affordable Plans For Customers"
@@ -26,8 +17,9 @@ export default function Price(){
                 height="71.8%"
                 image={PriceImage}
             />
+            <ScrollToTop />
             <section>
-                <h6 className="font-semibold pb-2 pt-20 text-center page-class">🟩 Single Pricing Option</h6>
+                <h6 className="font-semibold pb-2 text-center page-class">🟩 Single Pricing Option</h6>
                 <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 title-class">Choose the Right Plan for Your and Your Team</h2>
                 <div className="grid-content">
                     <div>
@@ -102,7 +94,6 @@ export default function Price(){
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

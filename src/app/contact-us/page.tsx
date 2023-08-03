@@ -2,8 +2,6 @@
 
 import Image from "next/image";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
 import ContactImage from '../../assets/png/contactUs/ContactImage.png';
@@ -15,22 +13,15 @@ import MailIcon from '../../assets/svg/icons/mail_icon.svg';
 import MapIcon from '../../assets/svg/icons/map_icon.svg';
 
 import './style.css';
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function ContactUs(){
-    const router = useRouter();
-
-    setTimeout(() => {
-        router.refresh();
-    }, 3000);
-
     const handleSubmit = () => {
         alert('Mensagem enviada com sucesso!')
     }
 
     return (
         <>
-            <Header router={router}/>
             <Hero 
                 page="Contact Us"
                 title="Feel Free Reach Us"
@@ -38,6 +29,7 @@ export default function ContactUs(){
                 image={ContactImage}
                 height="71.8%"
             />
+            <ScrollToTop />
             <section className="grid-content">
                 <div>
                     <Image src={ContactPerson} alt="Contact Person" />
@@ -95,7 +87,6 @@ export default function ContactUs(){
                     </div>
                 </form>
             </section>
-            <Footer />
         </>
     )
 }

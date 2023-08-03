@@ -2,10 +2,8 @@
 
 import Image from "next/image";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
 import ImageTeam from '../../assets/png/team/ImageTeam.png';
@@ -26,14 +24,9 @@ import TeamImage from '../../assets/png/team/Team.png';
 import CircleImage from '../../assets/svg/icons/year_team_circle.svg';
 
 import './style.css';
-import { useRouter } from "next/navigation";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Team(){
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push('/team');
-    }, []);
 
     const [visible, setVisible] = useState(false)
     const [id, setId]           = useState('')
@@ -49,7 +42,6 @@ export default function Team(){
 
     return (
         <>
-            <Header router={router}/>
             <Hero 
                 page="Our Team"
                 title="Meet Our Experts"
@@ -57,6 +49,7 @@ export default function Team(){
                 height="71.8%"
                 image={ImageTeam}
             />
+            <ScrollToTop />
             <section className="grid-content pt-16 pb-24">
                 <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image1')}>
                     {visible && id === 'image1' ? (
@@ -309,7 +302,6 @@ export default function Team(){
                     <Image src={TeamImage} alt="Team" />
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

@@ -1,28 +1,18 @@
 "use client"
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 import HomePageImage from '../assets/jpeg/HeroHome.jpg'
 
 import './home.css';
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/');
-  }, []);
 
   let paddingL = 'pl-24';
   let widthValue = 'w-11/12';
 
   return (
-    <>
-      <Header router={router}/>
       <main>
         <Hero 
           page="Welcome to Whitecollar" 
@@ -31,7 +21,8 @@ export default function Home() {
           height="72%"
           image={HomePageImage}
         />
-        <h2 className="title-class margin-top-5">Color</h2>
+        <ScrollToTop />
+        <h2 className="title-class">Color</h2>
         <div className={`flex justify-evenly colors-class ${widthValue} ${paddingL}`}>
           <div>
             <div className="green-div"></div>
@@ -110,7 +101,5 @@ export default function Home() {
           <div>Button Default</div>
         </div>
       </main>
-      <Footer />
-    </>
   )
 }

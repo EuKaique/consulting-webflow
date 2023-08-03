@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { useState } from "react";
 
@@ -66,47 +65,47 @@ export const Header = (router: any) => {
                 <nav className="flex justify-evenly py-8 px-12 items-center">
                     <div className="flex-header-menu">
                         <div>
-                            <Link href="/"><Image src={Logo} alt="Logo" /></Link>                 
+                            <a href="/"><Image src={Logo} alt="Logo" /></a>                 
                         </div>
                         <ButtonMenu router={router}/>
                     </div>
                     <ul className="flex items-center hide-class">
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <Link href="/">Home</Link>
+                            <a href="/">Home</a>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <Link href="/about-us">About Us</Link>
+                            <a href="/about-us">About Us</a>
                         </li>
                         <li className="text-sm pr-4 cursor-pointer" onMouseEnter={DropDownOpen} onMouseLeave={DropDownClose}>
                             Pages <span className="text-gray-500">&#11167;</span>
                             {open && (
                                 <ul className="absolute bg-white px-4 pb-2 z-50">
                                     <li className="pt-2 hover:opacity-30 text-xs">
-                                        <Link href="/projects">Projects</Link>
+                                        <a href="projects">Projects</a>
                                     </li>
                                     <li className="pt-2 hover:opacity-30 text-xs">
-                                        <Link href="/team" replace>Team</Link>
+                                        <a href="team">Team</a>
                                     </li>
                                     <li className="pt-2 hover:opacity-30 text-xs">
-                                        <Link href="/faq">FAQ</Link>
+                                        <a href="faq">FAQ</a>
                                     </li>
                                 </ul>
                             )}
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <Link href="/our-services">Services</Link>
+                            <a href="/our-services">Services</a>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <Link href="/blog">Blog</Link>
+                            <a href="/blog">Blog</a>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <Link href="/contact-us">Contact Us</Link>
+                            <a href="/contact-us">Contact Us</a>
                         </li>
-                        <Link href="/price" replace>
+                        <a href="/price">
                             <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
                                 <button style={{ color: '#FFF'}}>Get Consulting</button>
                             </li>
-                        </Link>
+                        </a>
                     </ul>
                 </nav>
             </div>

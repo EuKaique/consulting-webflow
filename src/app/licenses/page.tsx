@@ -1,23 +1,15 @@
 "use client";
 
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Licenses(){
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push('/licenses');
-    }, []);
 
     return (
         <>
-            <Header router={router}/>
+            <ScrollToTop />
             <section>
-                <h5 className="text-center text-sm font-semibold pt-24 pb-4">🟩 Template information</h5>
-                <h2 className="text-center text-5xl pb-6 font-bold">Licencing</h2>
+                <h5 className="text-slate-800 text-center text-sm font-semibold pt-24 pb-4">🟩 Template information</h5>
+                <h2 className="text-slate-800 text-center text-5xl pb-6 font-bold">Licencing</h2>
                 <div className="w-9/12 mx-auto">
                     <h3 className="text-2xl font-bold pb-2">Icons & Graphics</h3>
                     <p className="text-sm leading-relaxed text-gray-500 pb-8">Icons and Graphics were manually designed by the VictorFlow team. You may download these and edit them to fit your website without asking for permission or providing credit.</p>
@@ -32,7 +24,6 @@ export default function Licenses(){
                     <p className="text-gray-500 pb-16 text-sm text-gray-400">WhiteCollar template uses free licensed <span className="text-emerald-400">Google Fonts.</span> Please check <span className="text-emerald-400">Poppins</span> and <span className="text-emerald-400">Inter.</span></p>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }
