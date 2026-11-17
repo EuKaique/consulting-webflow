@@ -2,6 +2,7 @@
     display: none;
     margin-top: -3.2rem;
 }
+header a[aria-current="page"] { color: #454fc0; text-decoration: underline; text-underline-offset: .35em; font-weight: 600; }
 .menu-hamburguer p{
     height: 0.5rem;
     font-size: 3.6rem;
@@ -51,4 +52,13 @@
         justify-content: space-between;
         width: 100%;
     }
+}
+@media (max-width: 1024px) {
+header .hide-class { display: none; }
+header nav { padding: 1.25rem; }
+header > .bg-white { height: auto; }
+header .flex-header-menu { display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; }
+header .flex-header-menu > div:first-child { max-width: calc(100% - 4rem); }
+header .menu-hamburguer { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; margin: 0; }
+header .menu-hamburguer p { width: 26px; height: 3px; margin: 0; background: currentColor; font-size: 0; }
 }

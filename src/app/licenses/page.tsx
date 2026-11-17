@@ -1,5 +1,3 @@
-"use client";
-
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Licenses(){

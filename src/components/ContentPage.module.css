@@ -1,0 +1,8 @@
+.page { max-width: 72rem; margin: 0 auto; padding: clamp(2rem,6vw,5rem) 1.25rem; color: #37393f; }
+.page h1 { max-width: 24ch; font-size: clamp(2rem,4vw,3.5rem); font-weight: 700; line-height: 1.15; margin: 1.5rem 0; }
+.page h2 { font-size: 1.5rem; font-weight: 600; margin: 2rem 0 .75rem; }
+.page p, .page li { line-height: 1.85; max-width: 70ch; margin-bottom: 1rem; }
+.page ol { list-style: decimal; padding-left: 1.5rem; }
+.page a { color: #454fc0; text-decoration: underline; text-underline-offset: .2em; }
+.page img { max-height: 30rem; width: 100%; object-fit: cover; margin: 2rem 0; }
+.cta { display: inline-block; background: #454fc0; color: white !important; padding: .8rem 1.3rem; text-decoration: none !important; margin: 1rem 0; }

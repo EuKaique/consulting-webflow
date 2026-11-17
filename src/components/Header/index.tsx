@@ -1,8 +1,8 @@
-"use client";
-
+import Link from 'next/link';
+import NavigationLink from '../NavigationLink';
 import Image from "next/image";
 
-import { useState } from "react";
+import PagesMenu from "./PagesMenu";
 
 import InstagramIcon from "../../assets/svg/instagram.svg";
 import FacebookIcon from "../../assets/svg/facebook.svg";
@@ -18,17 +18,7 @@ import Logo from '../../assets/png/logo.png';
 import './style.css';
 import ButtonMenu from "../Buttons/ButtonMenu";
 
-export const Header = (router: any) => {
-    const [open, setOpen] = useState(false)
-    
-    const DropDownOpen = () => {
-        setOpen(true)
-    }
-
-    const DropDownClose = () => {
-        setOpen(false)
-    }
-
+export const Header = () => {
     return (
         <header>
             <div className="bg-slate-800 h-12 text-white hide-class">
@@ -40,7 +30,7 @@ export const Header = (router: any) => {
                                 <span className="text-xs font-light"> 24 Olive Street, Prairie, NY 53590</span>
                             </li>
                             <li className="flex items-center pl-6">
-                                <i className="pr-1"><Image src={MailPng} alt="E-mail" height="20" width="20" style={{ filter: "invert(100%)"}} /></i> 
+                                <i className="pr-1"><Image src={MailPng} alt="E-mail" height="20" width="20" style={{ filter: "invert(100%)"}} /></i>
                                 <span className="text-xs font-light">whitecollar@gmail.com</span>
                             </li>
                         </ul>
@@ -65,47 +55,28 @@ export const Header = (router: any) => {
                 <nav className="flex justify-evenly py-8 px-12 items-center">
                     <div className="flex-header-menu">
                         <div>
-                            <a href="/"><Image src={Logo} alt="Logo" /></a>                 
+                            <Link href="/"><Image src={Logo} alt="Logo" /></Link>
                         </div>
-                        <ButtonMenu router={router}/>
+                        <ButtonMenu />
                     </div>
                     <ul className="flex items-center hide-class">
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <a href="/">Home</a>
+                            <NavigationLink href="/">Home</NavigationLink>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <a href="/about-us">About Us</a>
+                            <NavigationLink href="/about-us">About Us</NavigationLink>
                         </li>
-                        <li className="text-sm pr-4 cursor-pointer" onMouseEnter={DropDownOpen} onMouseLeave={DropDownClose}>
-                            Pages <span className="text-gray-500">&#11167;</span>
-                            {open && (
-                                <ul className="absolute bg-white px-4 pb-2 z-50">
-                                    <li className="pt-2 hover:opacity-30 text-xs">
-                                        <a href="projects">Projects</a>
-                                    </li>
-                                    <li className="pt-2 hover:opacity-30 text-xs">
-                                        <a href="team">Team</a>
-                                    </li>
-                                    <li className="pt-2 hover:opacity-30 text-xs">
-                                        <a href="faq">FAQ</a>
-                                    </li>
-                                </ul>
-                            )}
+                        <PagesMenu />
+                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
+                            <NavigationLink href="/our-services">Services</NavigationLink>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <a href="/our-services">Services</a>
+                            <NavigationLink href="/blog">Blog</NavigationLink>
                         </li>
                         <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <a href="/blog">Blog</a>
+                            <NavigationLink href="/contact-us">Contact Us</NavigationLink>
                         </li>
-                        <li className="text-sm pr-4 hover:opacity-30 cursor-pointer">
-                            <a href="/contact-us">Contact Us</a>
-                        </li>
-                        <a href="/price">
-                            <li className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer">
-                                <button style={{ color: '#FFF'}}>Get Consulting</button>
-                            </li>
-                        </a>
+                        <li><Link href="/price" className="text-sm bg-indigo-600 p-3 hover:opacity-60 cursor-pointer text-white block">Get Consulting</Link></li>
                     </ul>
                 </nav>
             </div>

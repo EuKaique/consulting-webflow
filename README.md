@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+﻿# WhiteCollar consulting website
 
-## Getting Started
+A visual demonstration built with Next.js, React and TypeScript. The interface keeps the existing English language and WhiteCollar branding.
 
-First, run the development server:
+## Run locally
 
-```bash
+```sh
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demonstration flows
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Contact and newsletter forms validate entered fields and show a clearly labelled preview result. They prevent native submission, make no submission requests, and do not save form data. There is no email, CRM or newsletter integration.
+- Plan links open the contact preview with the selected plan in the subject. Service detail pages preserve the selected service in the same way. There is no checkout or payment processing.
+- Insights have complete detail pages and two-page navigation. Unknown article and service addresses return 404.
+- The mobile menu closes when a destination is selected and marks the current section, including nested pages. Desktop navigation also marks the current section.
+- The home page explains the consulting offer and leads to services, plans and the enquiry preview.
+- FAQ answers use labelled disclosure buttons with keyboard activation. The Pages submenu supports click, Enter, Space, Tab and Escape. Modals hide background content from assistive technology, contain focus and return it when closed.
+- The presentation dialog provides accessible text instead of playing the original uncaptioned video. The original file remains in `public/Apresentation.mp4`; restoring playback requires accurate, synchronized captions. No transcript or captions were invented.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Downloads
 
-## Learn More
+`public/downloads/consultation-guide.pdf` is an original preparation checklist for this demonstration. The ZIP contains the same PDF and a plain text checklist. These are sample resources, not client deliverables or contracts.
 
-To learn more about Next.js, take a look at the following resources:
+Regenerate both files with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```sh
+npm run resources:generate
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Validation
 
-## Deploy on Vercel
+```sh
+npm run build
+npx tsc --noEmit
+npm run test:e2e
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The browser tests cover form validation and the absence of submission requests, plan selection, article pagination, service destinations, downloads, mobile menu state and layout overflow. Run a production build before browser tests; the test runner starts and stops its own production server on port 3100.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+On Windows, tests use an installed Microsoft Edge. On other platforms, install the Playwright Chromium browser with `npx playwright install chromium`. Set `PLAYWRIGHT_CHANNEL` to use another installed browser channel, such as `chrome`.

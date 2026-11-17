@@ -26,6 +26,14 @@
 .btn-footer:hover{
     opacity: 0.9;
 }
+.newsletter-form { width: 100%; margin: 0; }
+.newsletter-form > div { flex-direction: column; }
+.newsletter-form > div button { width: 100%; }
+.newsletter-form input[type="email"] { min-width: 0; width: 100%; flex: 1; }
+.box-grey .newsletter-form input[type="checkbox"] { width: 1rem; min-width: 1rem; flex: none; }
+.newsletter-form :focus-visible { outline: 2px solid #40ddb6; outline-offset: 3px; }
+.newsletter-form button:disabled { opacity: .65; cursor: wait; }
+@media (max-width: 360px) { .newsletter-form > .flex { flex-wrap: wrap; } }
 .socials-footer img{
     filter: invert(80%);
     width: 1.2rem;
@@ -153,4 +161,12 @@
     .copy-class{
         width: 98.5%;
     }
+}
+@media (max-width: 1200px) {
+footer .footer-class-1, footer .footer-class-1 > ul, footer .flex-class-1 { flex-wrap: wrap; gap: 1.5rem; }
+footer .flex-class { flex-wrap: wrap; gap: 1.5rem; }
+footer .title-link { margin-right: 1.5rem; }
+footer .box-grey { width: 100%; padding: 1.25rem; }
+footer .box-grey input { width: 100%; min-width: 0; flex: 1; }
+footer .copy-class { flex-wrap: wrap; gap: 1rem; }
 }

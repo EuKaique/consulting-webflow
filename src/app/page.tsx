@@ -1,105 +1,44 @@
-"use client"
-
-import { Hero } from "@/components/Hero";
-import { ScrollToTop } from "@/components/ScrollToTop";
-
-import HomePageImage from '../assets/jpeg/HeroHome.jpg'
-
-import './home.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import HomeImage from '@/assets/jpeg/HeroHome.jpg';
+import { services } from '@/lib/services';
+import styles from './home.module.css';
 
 export default function Home() {
-
-  let paddingL = 'pl-24';
-  let widthValue = 'w-11/12';
-
   return (
-      <main>
-        <Hero 
-          page="Welcome to Whitecollar" 
-          title="Style Guide"
-          text={true} 
-          height="72%"
-          image={HomePageImage}
-        />
-        <ScrollToTop />
-        <h2 className="title-class">Color</h2>
-        <div className={`flex justify-evenly colors-class ${widthValue} ${paddingL}`}>
-          <div>
-            <div className="green-div"></div>
-            <span className="text-normal font-semibold pl-9">#40DDB6</span>
+    <main className={styles.page}>
+      <section className={styles.hero} aria-labelledby="home-heading">
+        <div className={styles.intro}>
+          <p className={styles.eyebrow}>WhiteCollar / Business consulting</p>
+          <h1 id="home-heading">A clearer plan for your next business decision.</h1>
+          <p>Bring your priorities, people and processes together. Explore practical support for the decisions and day-to-day challenges facing your business.</p>
+          <div className={styles.actions}>
+            <Link className={styles.primary} href="/contact-us#contact-form">Discuss your business needs →</Link>
+            <Link className={styles.secondary} href="/our-services">Explore services</Link>
           </div>
-          <div>
-            <div className="purple-div"></div>
-            <span className="text-normal font-semibold pl-9">#6B78E5</span>
-          </div>
-          <div>
-            <div className="black-div"></div>
-            <span className="text-normal font-semibold pl-9">#37393F</span>
-          </div>
-          <div>
-            <div className="grey-div"></div>
-            <span className="text-normal font-semibold pl-9">#7D7D7D</span>
-          </div>
-          <div>
-            <div className="light-div"></div>
-            <span className="text-normal font-semibold pl-9">#F4F4F4</span>
-          </div>
+          <p className={styles.demoNote}>A demonstration website. Contact and subscription forms are previews.</p>
         </div>
-
-        <h2 className="title-class">Typography</h2>
-        <div className="typography-class">
-          <h1>Heading H1 Title</h1>
-          <h2>Heading H2 Title</h2>
-          <h3>Heading H3 Title</h3>
-          <h4>Heading H4 Title</h4>
-          <h5>Heading H5 Title</h5>
-          <h6>Heading H6 Title</h6>
+        <div className={styles.photo}><Image src={HomeImage} alt="Colleagues discussing a business plan" fill priority sizes="(max-width: 767px) 100vw, 45vw" /></div>
+      </section>
+      <section className={styles.services} aria-labelledby="services-heading">
+        <div className={styles.sectionHeading}><p className={styles.eyebrow}>Where to begin</p><h2 id="services-heading">Find the support that fits your challenge.</h2><Link href="/our-services">All services →</Link></div>
+        <div className={styles.serviceList}>
+          {services.slice(0, 4).map(service => <article key={service.slug}><h3><Link href={`/our-services/${service.slug}`}>{service.title} <span aria-hidden="true">↗</span></Link></h3><p>{service.summary}</p></article>)}
         </div>
-
-        <h2 className="title-class">Paragraph</h2>
-        <div className="paragraph-class">
-          <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets 
-            containing Lorem Ipsum passages, and more recently with.
-          </p>
-        </div>
-
-        <h2 className="title-class">Lists</h2>
-        <div className="list-class">
-          <ul>
-            <li>The printing and typesetting industry.</li>
-            <li>Lorem Ipsum has been the industry's standard</li>
-            <li>It has survived not only five centuries.</li>
-          </ul>
-          <ol>
-            <li> The printing and typesetting industry.</li>
-            <li> Lorem Ipsum has been the industry's standard</li>
-            <li> It has survived not only five centuries.</li>
-          </ol>
-        </div>
-
-        <h2 className="title-class">Blockquotes</h2>
-        <div className="blockquotes-class">
-          <p>
-            The job market of the future will consist of those jobs that robots cannot perform. 
-            Our blue-collar work is pattern recognition, making sense of what you see. 
-            Gardeners will still have jobs because every garden is different. 
-            The same goes for construction workers. The losers are white-collar workers, low-level accountants, 
-            brokers, and agents.
-          </p>
-        </div>
-
-        <h2 className="title-class">Button</h2>
-        <div className="button-class">
-          <div>Button Default</div>
-          <div>Button Default</div>
-          <div>Button Default</div>
-          <div>Button Default</div>
-        </div>
-      </main>
-  )
+      </section>
+      <section className={styles.process} aria-labelledby="process-heading">
+        <p className={styles.eyebrow}>From question to action</p>
+        <h2 id="process-heading">Start with the problem. Leave with a next step.</h2>
+        <ol>
+          <li><span>01</span><h3>Understand the situation</h3><p>Describe the decision, the people involved and what is getting in the way.</p></li>
+          <li><span>02</span><h3>Agree on the scope</h3><p>Identify the information needed and define what useful support would look like.</p></li>
+          <li><span>03</span><h3>Set the next steps</h3><p>Build an action plan with responsibilities, priorities and a time to review.</p></li>
+        </ol>
+      </section>
+      <section className={styles.nextStep}>
+        <div><p className={styles.eyebrow}>Take a closer look</p><h2>See how a consulting conversation starts.</h2><p>Compare plans, explore our approach or preview an enquiry with your chosen service.</p></div>
+        <div className={styles.actions}><Link className={styles.primary} href="/price">Compare plans →</Link><Link className={styles.secondary} href="/about-us">About WhiteCollar</Link></div>
+      </section>
+    </main>
+  );
 }

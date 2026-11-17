@@ -1,0 +1,88 @@
+
+.page :global(.grid-content){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+    margin: 8% auto 6% auto;
+}
+.page :global(.border-radius){
+    border-radius: 50%;
+    background-color: #ebebeb;
+    padding: 0.8rem 0.9rem;
+}
+.page :global(.border-radius img){
+    width: 1.1rem;
+}
+.page :global(form){
+    width: 70%;
+    margin: 4% auto 10% auto;
+}
+.page :global(.textfield){
+    background-color: #f1f1f1;
+    border: 1px solid rgb(201, 201, 201);
+    padding: 0.8rem 1rem;
+    width: 49%;
+    margin-bottom: 2%;
+
+}
+.page :global(textarea){
+    background-color: #f1f1f1;
+    border: 1px solid rgb(201, 201, 201);
+    min-width: 100%;
+    max-width: 80vw;
+    padding: 0.8rem 1rem;
+    height: 180px;
+
+}
+.page :global(.btn){
+    background-color: #6B77E5;
+    color: #F4F4F4;
+    padding: 0.6rem 2rem;
+    font-size: 0.9rem;
+}
+.page :global(.btn:hover){
+    opacity: 0.7;
+    transition: 0.2s;
+}
+.page :global(.grid-content){ width: min(75rem,calc(100% - 2.5rem)); grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2rem; margin: 0 auto 3rem;
+}
+.page :global(.grid-content > *){ min-width: 0;
+}
+.page :global(.grid-content > div:nth-child(2)){ padding-left: 0;
+}
+.page :global(form){ width: min(60rem,calc(100% - 2.5rem));
+}
+.page :global(form > .flex){ gap: 1rem;
+}
+.page :global(.textfield){ min-width: 0; flex: 1;
+}
+.page :global(.contact-fields) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.page :global(form label) { display: block; font-size: .9rem; font-weight: 500; }
+.page :global(form .textfield) { display: block; width: 100%; margin-top: .4rem; }
+.page :global(form textarea) { display: block; margin-top: .4rem; }
+.page :global(form input:focus-visible), .page :global(form textarea:focus-visible) { outline: 2px solid #454fc0; outline-offset: 2px; }
+.page :global(form button:disabled) { cursor: wait; opacity: .65; }
+.page :global(textarea){ width: 100%; min-width: 0; max-width: 100%;
+}
+@media (max-width: 767px) {
+.page :global(.contact-fields) { grid-template-columns: minmax(0, 1fr); }
+.page :global(.grid-content){ grid-template-columns: minmax(0,1fr);
+}
+.page :global(.grid-content > div:first-child img){ width: 100%; height: auto;
+}
+.page :global(.p-class){ padding-bottom: 1.5rem;
+}
+.page :global(form > .flex){ flex-direction: column;
+}
+.page :global(.textfield){ width: 100%;
+}
+.page :global(form > .flex:last-child){ align-items: center;
+}
+}
+.page :global(.page-class),.page :global(.margin-top){ margin-top: 0;
+}
+@media (max-width: 425px) {
+.page :global(.grid-content),.page :global(.grid-content-1),.page :global(.grid-content-2),.page :global(.box-gray){ margin-top: 0;
+}
+}
+

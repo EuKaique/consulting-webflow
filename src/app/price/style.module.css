@@ -1,0 +1,132 @@
+
+.page :global(.grid-content){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2%;
+    padding: 12% 12% 8% 12%;
+}
+.page :global(.border-top){
+    border-top: 1px solid rgb(207, 207, 207);
+    width: 90%;
+    margin: 0 auto;
+}
+.page :global(.border-bottom){
+    border-bottom: 1px solid rgb(207, 207, 207);
+    width: 90%;
+    margin: 0 auto;
+}
+.page :global(.border-top-white){
+    border-top: 1px solid #F4F4F4;
+    width: 90%;
+    margin: 0 auto;
+}
+.page :global(.border-bottom-white){
+    border-bottom: 1px solid #F4F4F4;
+    width: 90%;
+    margin: 0 auto;
+}
+.page :global(.btn-green){
+    background-color: #40DDB6;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+.page :global(.btn-white){
+    background-color: #F4F4F4;
+    color: #6B77E5;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+.page :global(.btn-white-2){
+    background-color: #F4F4F4;
+    color: #6B77E5;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin-bottom: 8%;
+}
+.page :global(.line-height){
+    line-height: 1.5rem;
+}
+.page :global(.btn-purple){
+    background-color: #6B77E5;
+    color: #F4F4F4;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+}
+.page :global(.margin-top){
+    margin-top: -17%;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+.page :global(.page-class){
+        margin-top: -35%;
+}
+.page :global(.title-class){
+        width: 100%;
+        font-size: 1.6rem;
+}
+.page :global(.grid-content){
+        display: block;
+}
+.page :global(.grid-content div:nth-child(2)){
+        margin-bottom: 10%;
+}
+.page :global(.margin-top){
+        margin-top: 20%;
+}
+}
+@media screen and (min-width: 1600px){
+.page :global(.margin-top){
+        margin-top: -14%;
+}
+}
+@media screen and (min-width: 1920px){
+.page :global(.margin-top){
+        margin-top: -11%;
+}
+}
+@media screen and (min-width: 2560px){
+.page :global(.margin-top){
+        margin-top: -8%;
+}
+}
+@media (min-width: 426px) and (max-width: 1024px) {
+.page :global(.grid-content){ grid-template-columns: repeat(2,minmax(0,1fr)); width: calc(100% - 2.5rem); padding: 0; gap: 1.5rem; margin: 2rem auto;
+}
+.page :global(.grid-content > *){ min-width: 0;
+}
+.page :global(.grid-content-1),.page :global(.grid-content-2){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 0 1.25rem; width: 100%;
+}
+.page :global(.grid-content-3),.page :global(.grid-content-4){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 2rem 1.25rem;
+}
+.page :global(.grid-content .box){ width: 100%; padding: 1.5rem;
+}
+.page :global(.flex-content){ width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.flex-content > div){ width: 48%;
+}
+.page :global(.testimonial){ grid-template-columns: minmax(0,1fr); width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.testimonial-box){ margin: 1rem 0;
+}
+.page :global(.info){ flex-direction: column; gap: 1.5rem;
+}
+.page :global(.info div:first-child),.page :global(.info div:last-child){ width: 100%; margin-left: 0;
+}
+.page :global(.padding-x){ padding-left: 1.25rem; padding-right: 1.25rem;
+}
+}
+.page :global(.page-class),.page :global(.margin-top){ margin-top: 0;
+}
+@media (max-width: 425px) {
+.page :global(.grid-content),.page :global(.grid-content-1),.page :global(.grid-content-2),.page :global(.box-gray){ margin-top: 0;
+}
+}
+@media (max-width: 1024px) {
+.page :global(.title-class) { width: auto; max-width: calc(100% - 2.5rem); margin-left: auto; margin-right: auto; padding: 0;
+}
+}
+@media (max-width: 767px) {
+.page :global(.grid-content) { display: grid; grid-template-columns: minmax(0,1fr); gap: 2rem; width: calc(100% - 2.5rem); padding: 0; margin: 2rem auto;
+}
+}
+

@@ -1,5 +1,4 @@
-"use client";
-
+import Link from 'next/link';
 import Image from "next/image";
 
 import { Hero } from "@/components/Hero";
@@ -15,12 +14,12 @@ import RightIcon from '../../assets/svg/icons/right.svg';
 
 import SingleOffice from '../../assets/png/single/SingleOffice.png';
 
-import './style.css';
+import styles from './style.module.css';
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Single(){
     return (
-        <>
+        <div className={styles.page}>
             <Hero 
                 page="About The Services"
                 title="Business Management"
@@ -64,10 +63,10 @@ export default function Single(){
                         <h3 className="font-semibold text-lg pl-2 pb-4 border-bottom">Download</h3>
                         <p className="text-gray-500 py-4 text-sm w-11/12">One-to-one customer service with robust deliverables.</p>
                         <div className="pb-4">
-                            <button className="btn"><Image src={DocumentPdf} alt="Document"/> Document.pdf</button>
+                            <a href="/downloads/consultation-guide.pdf" download className="btn"><Image src={DocumentPdf} alt=""/> Preparation guide (PDF)</a>
                         </div>
                         <div className="flex">
-                            <button className="btn"><Image src={DocumentZip} alt="Document"/> Document.zip</button>
+                            <a href="/downloads/consultation-resources.zip" download className="btn"><Image src={DocumentZip} alt=""/> Consultation resources (ZIP)</a>
                         </div>
                     </div>
                     <div className="box-green">
@@ -76,9 +75,7 @@ export default function Single(){
                         <h2 className="font-bold text-2xl text-white text-center">any help?</h2>
                         <p className="text-center pt-2 pb-8 w-8/12 text-sm text-slate-800 mx-auto">Leverage agile frameworks to provide a robust synopsis for high level.</p>
                         <div className="flex justify-center">
-                            <a href="/contact-us">
-                                <button className="btn-2">Contact Us</button>
-                            </a>
+                            <Link href="/contact-us" className="btn-2">Contact Us</Link>
                         </div>
                     </div>
                 </div>
@@ -120,6 +117,6 @@ export default function Single(){
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

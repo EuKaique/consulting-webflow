@@ -1,17 +1,18 @@
-.grid-content-1{
+
+.page :global(.grid-content-1){
     display: grid;
     grid-template-columns: 1.63fr 2fr;
 }
-.btn{
+.page :global(.btn){
     padding: 1rem;
     background-color: #6B78E5;
     color: #FFF;
     margin-top: 8%;
 }
-.btn:hover{
+.page :global(.btn:hover){
     opacity: 0.9;
 }
-.circle-green{
+.page :global(.circle-green){
     background-color: #40DDB6;
     border-radius: 50%;
     width: 3rem;
@@ -19,7 +20,7 @@
     margin-left: 40%;
     margin-top: -25%;
 }
-.circle-purple{
+.page :global(.circle-purple){
     background-color: #6B78E5;
     border-radius: 50%;
     width: 3rem;
@@ -27,61 +28,61 @@
     margin-left: 40%;
     margin-top: -25%;
 }
-.circle-purple-2 img{
+.page :global(.circle-purple-2 img){
     background-color: #6B78E5;
     border-radius: 50%;
     width: 3rem;
     padding: 0.4rem;
     margin-left: 38%;
 }
-.circle-white img{
+.page :global(.circle-white img){
     background-color: #FFF;
     border-radius: 50%;
     width: 3rem;
     padding: 0.4rem;
     margin-left: 38%;
 }
-.grid-content-2{
+.page :global(.grid-content-2){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 0 15%;
     column-gap: 2%;
     margin-bottom: 5%;
 }
-.grid-content-2 > div{
+.page :global(.grid-content-2 > div){
     background-color: #F4F4F4;
     padding: 2rem;
 }
-.grid-content-3{
+.page :global(.grid-content-3){
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background-color: #F4F4F4;
     padding: 4% 16%;
 }
-.grid-content-3 .box{
+.page :global(.grid-content-3 .box){
     border-right: 1px solid #7D7D7D;
     padding: 0 1rem;
 }
-.video-class{
+.page :global(.video-class){
     background-image: url('../../assets/png/background-image.png');
     background-size: cover;
 }
-.video-class div{
+.page :global(.video-class div){
     display: flex;
     justify-content: center;
     padding: 3% 0;
 }
-.padding-x{
+.page :global(.padding-x){
     padding-left: 30%;
     padding-right: 30%;
 }
-.grid-content-4{
+.page :global(.grid-content-4){
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 5% 20% 10% 20%;
     column-gap: 3%;
 }
-.box-people{
+.page :global(.box-people){
     margin-top: -6rem;
     align-items: center;
     background-color: #FFF;
@@ -91,7 +92,7 @@
     text-align: center;
     width: 90%;
 }
-.box-people-2{
+.page :global(.box-people-2){
     margin-top: -6rem;
     align-items: center;
     background-color: #FFF;
@@ -101,7 +102,7 @@
     text-align: center;
     width: 94%;
 }
-.box-people-3{
+.page :global(.box-people-3){
     margin-top: -6rem;
     align-items: center;
     background-color: #FFF;
@@ -111,14 +112,14 @@
     text-align: center;
     width: 90%;
 }
-.purple-bg{
+.page :global(.purple-bg){
     transition: 0.3s;
     filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
     -webkit-filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
     -moz-filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
     margin-top: -10%;
 }
-.socials{
+.page :global(.socials){
     position: relative;
     display: flex;
     justify-content: space-evenly;
@@ -127,7 +128,7 @@
     top: 50%;
     z-index: 99999;
 }
-.socials li{
+.page :global(.socials li){
     font-weight: bold;
     background-color: #1fc098;
     display: flex;
@@ -136,61 +137,60 @@
     padding: 0.2rem 0.2rem 0.2rem 0.4rem;
     cursor: pointer;
 }
-.socials li:first-child{
+.page :global(.socials li:first-child){
     padding: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
-.socials img{
+.page :global(.socials img){
     filter: invert(1);
     width: 1.4rem;
 }
 /* RESPONSIVE */
 @media screen and (max-width: 425px){
-    .grid-content-1{
+.page :global(.grid-content-1){
         display: block;
         margin-top: -15%;
-    }
-    .grid-content-1 div:first-child{
+}
+.page :global(.grid-content-1 div:first-child){
         padding: 5% 10%;
-    }
-    .grid-content-2{
+}
+.page :global(.grid-content-2){
         display: block;
-    }
-    .grid-content-2 div{
+}
+.page :global(.grid-content-2 div){
         margin-top: 20%;
-    }
-    .grid-content-2 div:first-child{
+}
+.page :global(.grid-content-2 div:first-child){
         margin-top: 0%;
-    }
-    .grid-content-2 div:last-child{
+}
+.page :global(.grid-content-2 div:last-child){
         margin-bottom: 15%;
-    }
-    .grid-content-3{
+}
+.page :global(.grid-content-3){
         display: block;
-    }
-    .grid-content-3 .box{
+}
+.page :global(.grid-content-3 .box){
         border-right: none;
         border-bottom: 1px solid #7D7D7D;
         padding-bottom: 7%;
         padding-top: 7%;
-    }
-    .grid-content-3 .box:last-child{
+}
+.page :global(.grid-content-3 .box:last-child){
         border-bottom: none;
-    }
-    .circle-green,
-    .circle-purple{
+}
+.page :global(.circle-green),.page :global(.circle-purple){
         margin-top: -25% !important;
-    }
-    .video-class p{
+}
+.page :global(.video-class p){
         font-size: 0.9rem;
         padding: 5% 3% 0;
-    }
-    video{
+}
+.page :global(video){
         max-width: 100%;
         height: 220px;
         margin-top: 30%;
         margin-left: -20px;
-    }
-    .video-modal > button {
+}
+.page :global(.video-modal > button){
         padding-top: 0%;
         position: absolute;
         right: 16%;
@@ -199,61 +199,90 @@
         font-weight: 700;
         color: #2C2C2C;
         z-index: 99999;
-    }
-    .grid-content-4{
+}
+.page :global(.grid-content-4){
         display: block;
-    }
-    .grid-content-4 .box-people{
+}
+.page :global(.grid-content-4 .box-people){
         margin-top: -35%;
         margin-bottom: 20%;
-    }
-    .socials{
+}
+.page :global(.socials){
         margin-bottom: -75%;
         margin-top: 65%;
-    }
+}
 }
 @media screen and (min-width: 1600px){
-    .circle-purple-2,
-    .circle-white{
+.page :global(.circle-purple-2),.page :global(.circle-white){
         margin-left: 2%;
-    }
+}
 }
 @media screen and (min-width: 1920px){
-    .grid-content-1{
+.page :global(.grid-content-1){
         padding: 0 15%;
-    }
-    .grid-content-2{
+}
+.page :global(.grid-content-2){
         margin-top: 0%;
         padding: 0 20%;
-    }
-    .circle-purple-2,
-    .circle-white{
+}
+.page :global(.circle-purple-2),.page :global(.circle-white){
         margin-left: 5%;
-    }
+}
 }
 @media screen and (min-width: 2560px){
-    .grid-content-1{
+.page :global(.grid-content-1){
         padding: 0 20%;
-    }
-    .grid-content-2{
+}
+.page :global(.grid-content-2){
         margin-top: 5%;
-    }
-    .circle-green,
-    .circle-purple{
+}
+.page :global(.circle-green),.page :global(.circle-purple){
         margin-left: 45%;
-    }
-    .circle-purple-2,
-    .circle-white{
+}
+.page :global(.circle-purple-2),.page :global(.circle-white){
         margin-left: 10%;
-    }
-    .grid-content-4{
+}
+.page :global(.grid-content-4){
         padding: 5% 25% 10% 25%;
-    }
-    .grid-content-2 > div{
+}
+.page :global(.grid-content-2 > div){
         background-color: #F4F4F4;
         padding: 5rem 2rem;
-    }
-    .box-people{
-        margin-left: 3%;
-    }
 }
+.page :global(.box-people){
+        margin-left: 3%;
+}
+}
+@media (min-width: 426px) and (max-width: 1024px) {
+.page :global(.grid-content){ grid-template-columns: repeat(2,minmax(0,1fr)); width: calc(100% - 2.5rem); padding: 0; gap: 1.5rem; margin: 2rem auto;
+}
+.page :global(.grid-content > *){ min-width: 0;
+}
+.page :global(.grid-content-1),.page :global(.grid-content-2){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 0 1.25rem; width: 100%;
+}
+.page :global(.grid-content-3),.page :global(.grid-content-4){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 2rem 1.25rem;
+}
+.page :global(.grid-content .box){ width: 100%; padding: 1.5rem;
+}
+.page :global(.flex-content){ width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.flex-content > div){ width: 48%;
+}
+.page :global(.testimonial){ grid-template-columns: minmax(0,1fr); width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.testimonial-box){ margin: 1rem 0;
+}
+.page :global(.info){ flex-direction: column; gap: 1.5rem;
+}
+.page :global(.info div:first-child),.page :global(.info div:last-child){ width: 100%; margin-left: 0;
+}
+.page :global(.padding-x){ padding-left: 1.25rem; padding-right: 1.25rem;
+}
+}
+.page :global(.page-class),.page :global(.margin-top){ margin-top: 0;
+}
+@media (max-width: 425px) {
+.page :global(.grid-content),.page :global(.grid-content-1),.page :global(.grid-content-2),.page :global(.box-gray){ margin-top: 0;
+}
+}
+
