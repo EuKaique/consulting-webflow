@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { Hero } from "@/components/Hero";
@@ -15,12 +13,12 @@ import ConsultEPrograms from '../../assets/png/projects/ConsultEPrograms.png';
 
 import Calendary from '../../assets/svg/icons/calendary.svg';
 
-import './style.css';
+import styles from './style.module.css';
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function Projects(){
     return (
-        <>
+        <div className={styles.page}>
             <Hero 
                 page="The Case Studies"
                 title="Our Latest Projects"
@@ -108,6 +106,6 @@ export default function Projects(){
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

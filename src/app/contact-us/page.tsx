@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 
 import { Hero } from "@/components/Hero";
@@ -12,19 +10,22 @@ import PhoneIcon from '../../assets/svg/icons/phone_icon.svg';
 import MailIcon from '../../assets/svg/icons/mail_icon.svg';
 import MapIcon from '../../assets/svg/icons/map_icon.svg';
 
-import './style.css';
+import styles from './style.module.css';
 import { ScrollToTop } from "@/components/ScrollToTop";
 
-export default function ContactUs(){
-    const handleSubmit = () => {
-        alert('Mensagem enviada com sucesso!')
-    }
+import ContactForm from './ContactForm';
+import { getPlan } from '@/lib/plans';
+import { services } from '@/lib/services';
 
-    return (
-        <>
+export default function ContactUs({ searchParams }: { searchParams: { plan?: string; service?: string } }) {
+  const plan = getPlan(searchParams.plan);
+  const service = services.find(item => item.slug === searchParams.service);
+  const initialSubject = plan ? 'Enquiry about the ' + plan + ' plan' : service ? 'Enquiry about ' + service.title : '';
+  return (
+        <div className={styles.page}>
             <Hero 
                 page="Contact Us"
-                title="Feel Free Reach Us"
+                title="Let's discuss your business"
                 text={false}
                 image={ContactImage}
                 height="71.8%"
@@ -69,24 +70,9 @@ export default function ContactUs(){
             </section>
             <section>
                 <h4 className="font-semibold text-center page-class">🟩 Contact Us</h4>
-                <h2 className="text-3xl py-2 font-bold text-center">Request A Call Back !</h2>
-                <form onSubmit={handleSubmit}>
-                    <div className="flex justify-between">
-                        <input className="textfield" type="text" name="name" id="name" placeholder="Your name" required/>
-                        <input className="textfield" type="email" name="email" id="email" placeholder="E-mail address" required/>
-                    </div>
-                    <div className="flex justify-between">
-                        <input className="textfield" type="text" name="phone" id="phone" placeholder="Phone number" required/>
-                        <input className="textfield" type="text" name="subject" id="subject" placeholder="Subject" required/>
-                    </div>
-                    <div className="w-full">
-                        <textarea name="message" id="message" placeholder="Message..."></textarea>
-                    </div>
-                    <div className="flex justify-center pt-6">
-                        <button className="btn" type="submit">Submit</button>
-                    </div>
-                </form>
+                <h2 className="text-3xl py-2 font-bold text-center">Tell us what you need</h2>
+                <ContactForm initialSubject={initialSubject} />
             </section>
-        </>
+        </div>
     )
 }

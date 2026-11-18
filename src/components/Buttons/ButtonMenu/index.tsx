@@ -1,11 +1,12 @@
 "use client"
 
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
 import './style.css';
-import Menu from '@/components/Menu';
+const Menu = dynamic(() => import('@/components/Menu'), { ssr: false });
 
-function ButtonMenu(router: any) {
+function ButtonMenu() {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleOpenModal = () => {
@@ -18,12 +19,12 @@ function ButtonMenu(router: any) {
     
     return ( 
         <div>
-            <button className="menu-hamburguer" onClick={handleOpenModal}>
-                <p>-</p>
-                <p>-</p>
-                <p>-</p>
+            <button className="menu-hamburguer" type="button" aria-label="Open navigation menu" aria-haspopup="dialog" aria-expanded={isModalOpen} aria-controls={isModalOpen ? "navigation-dialog" : undefined} onClick={handleOpenModal}>
+                <p aria-hidden="true">-</p>
+                <p aria-hidden="true">-</p>
+                <p aria-hidden="true">-</p>
             </button>
-          <Menu isOpen={isModalOpen} onClose={handleCloseModal} router={router}/>
+          {isModalOpen && <Menu isOpen={isModalOpen} onClose={handleCloseModal} />}
         </div>
     )
 }

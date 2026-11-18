@@ -1,5 +1,5 @@
-"use client"
-
+import NewsletterForm from './NewsletterForm';
+import Link from 'next/link';
 import Phone from '../../assets/png/footer/phone.png'
 import Mail from '../../assets/png/footer/mail.png'
 import Location from '../../assets/png/footer/localization.png'
@@ -67,19 +67,19 @@ export const Footer = () => {
                                     🟪 Quick Link
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Home</a>
+                                    <Link href="/">Home</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/about-us">About Us</a>
+                                    <Link href="/about-us">About Us</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/blog">Blog</a>
+                                    <Link href="/blog">Blog</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/our-services">Services</a>
+                                    <Link href="/our-services">Services</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/contact-us">Contact</a>
+                                    <Link href="/contact-us">Contact</Link>
                                 </li>
                             </div>
                             <div>
@@ -87,19 +87,19 @@ export const Footer = () => {
                                     <span>🟪</span><span className="title-link">Our Services</span>
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Financial Consulting</a>
+                                    <Link href="/our-services/financial-consultancy">Financial Consulting</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/single">Bussiness Management</a>
+                                    <Link href="/single">Bussiness Management</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Consult & Programs</a>
+                                    <Link href="/our-services/consultancy-programs">Consult & Programs</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Company Management</a>
+                                    <Link href="/our-services/company-management">Company Management</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Insurance & Finance</a>
+                                    <Link href="/our-services/insurance-finance">Insurance & Finance</Link>
                                 </li>
                             </div>
                             <div>
@@ -107,19 +107,19 @@ export const Footer = () => {
                                     <span>🟪</span><span className="title-link">Utility Page</span>
                                 </li>
                                 <li className="mt-3 text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Style Guide</a>
+                                    <Link href="/our-services">Explore services</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/licenses">Licenses</a>
+                                    <Link href="/licenses">Licenses</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Instructions</a>
+                                    <Link href="/faq">Frequently asked questions</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/">Changelog</a>
+                                    <Link href="/blog">Business insights</Link>
                                 </li>
                                 <li className="text-white font-light li-hover leading-relaxed">
-                                    <a href="/not-found">404 Page</a>
+                                    <Link href="/contact-us">Get in touch</Link>
                                 </li>
                             </div>
 
@@ -127,11 +127,8 @@ export const Footer = () => {
                     </ul>
                     <div className="text-white box-grey bg-slate-800">
                         <h3>Subscribe</h3>
-                        <p className="font-light text-sm">Join Our Mailing List & to get our news.</p>
-                        <div className='flex pt-3'>
-                            <input type="text" placeholder='your email address' className="px-2 py-1 text-sm text-black outline-none"/>
-                            <button className="btn-footer">Subscribe</button>
-                        </div>
+                        <p className="font-light text-sm">Explore the newsletter signup preview.</p>
+                        <NewsletterForm />
                     </div>
                 </div>
                 <div className="copy-class">
@@ -141,24 +138,24 @@ export const Footer = () => {
                     <div>
                         <ul className="flex">
                             <li className="text-white ml-2 socials-footer">
-                                <a href="/">
+                                <Link href="/">
                                     <Image src={Instagram} alt="Instagram"/>
-                                </a>
+                                </Link>
                             </li>
                             <li className="socials-footer">
-                                <a href="/">
+                                <Link href="/">
                                     <Image src={Facebook} alt="Facebook"/>
-                                </a>
+                                </Link>
                             </li>
                             <li className="socials-footer">
-                                <a href="/">
+                                <Link href="/">
                                     <Image src={Twitter} alt="Twitter"/>
-                                </a>
+                                </Link>
                             </li>
                             <li className="socials-footer">
-                                <a href="/">
+                                <Link href="/">
                                     <Image src={Pinterest} alt="Pinterest"/>
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>

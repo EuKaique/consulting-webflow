@@ -1,10 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
-import { useState } from "react";
-
+import ButtonPlay from '@/components/Buttons/ButtonPlay';
 import { Hero } from "@/components/Hero";
 
 import HeroImage from '../../assets/jpeg/HeroAbout.jpg';
@@ -20,37 +16,14 @@ import HandsIcon from '../../assets/svg/icons/hands.svg';
 import CodeIcon from '../../assets/svg/icons/code.svg';
 import PeopleIcon from '../../assets/svg/icons/people.svg';
 
-import Nattasha from '../../assets/jpeg/Nattasha-Kelvin.jpg';
-import David from '../../assets/jpeg/David-Simpson.jpg';
-import Madeleine from '../../assets/jpeg/Madeleine-Grant.jpg';
-
-import Instagram from '../../assets/svg/instagram.svg';
-import Facebook from '../../assets/svg/facebook.svg';
-import Twitter from '../../assets/svg/twitter.svg';
-
-import './style.css';
+import styles from './style.module.css';
 import { ScrollToTop } from "@/components/ScrollToTop";
 
+import PeopleGrid from './PeopleGrid';
+
 export default function AboutUs(){
-    const [visible, setVisible] = useState(false)
-    const [id, setId]           = useState('')
-
-    const Play = dynamic(
-        () => import('../../components/Buttons/ButtonPlay'),
-        { ssr: false }
-    )
-
-    const handleMove = () => {
-        setVisible(true)
-    }
-
-    const handleLeave = () => {
-        setVisible(false)
-        setId('')
-    }
-    
     return (
-        <>
+        <div className={styles.page}>
             <Hero 
                 page="About Us" 
                 title="Know About Us"
@@ -158,129 +131,14 @@ export default function AboutUs(){
                 <h2 className="text-center font-semibold text-3xl">Our Presentation</h2>
                 <p className="text-center pt-12 font-light padding-x">Collaboratively administrate channels whereas virtual tailers predominate procedures reliable supply chains.</p>
                 <div>
-                    <Play />
+                    <ButtonPlay />
                 </div>
             </section>
             <section>
                 <h6 className="font-normal pb-2 pt-8 text-center">🟩 Our Team</h6>
                 <h2 className="text-center font-bold text-3xl">Meet Our Experts</h2>
-                <div className="grid-content-4">
-                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image1')} >
-                        {visible && id === 'image1' ? (
-                            <>
-                                    <ul className="socials">
-                                        <div>
-                                            <li>
-                                                <Image src={Instagram} alt="Instagram"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Facebook} alt="Facebook"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Twitter} alt="Twitter"/>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                <div className="purple-bg">
-                                    <Image src={Nattasha} alt="Nattasha"/>
-                                </div>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">Nattasha Kelvin</h3>
-                                    <p className="font-light text-xs pt-1">Managing Director</p>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <Image src={Nattasha} alt="Nattasha"/>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">Nattasha Kelvin</h3>
-                                    <p className="font-light text-xs pt-1">Managing Director</p>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image2')}>
-                        {visible && id === 'image2' ? (
-                            <>
-                                    <ul className="socials">
-                                        <div>
-                                            <li>
-                                                <Image src={Instagram} alt="Instagram"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Facebook} alt="Facebook"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Twitter} alt="Twitter"/>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                <div className="purple-bg">
-                                    <Image src={David} alt="David"/>
-                                </div>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">David Simpson</h3>
-                                    <p className="font-light text-xs pt-1">Designer</p>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <Image src={David} alt="David"/>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">David Simpson</h3>
-                                    <p className="font-light text-xs pt-1">Designer</p>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                    <div onMouseEnter={handleMove} onMouseLeave={handleLeave} onMouseMove={() => setId('image3')}>
-                        {visible && id === 'image3' ? (
-                            <>
-                                    <ul className="socials">
-                                        <div>
-                                            <li>
-                                                <Image src={Instagram} alt="Instagram"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Facebook} alt="Facebook"/>
-                                            </li>
-                                        </div>
-                                        <div>
-                                            <li>
-                                                <Image src={Twitter} alt="Twitter"/>
-                                            </li>
-                                        </div>
-                                    </ul>
-                                <div className="purple-bg">
-                                    <Image src={Madeleine} alt="Madeleine"/>
-                                </div>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">Madeleine Grant</h3>
-                                    <p className="font-light text-xs pt-1">Marketing Specialist</p>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <Image src={Madeleine} alt="Madeleine"/>
-                                <div className="box-people">
-                                    <h3 className="font-bold text-1xl">Madeleine Grant</h3>
-                                    <p className="font-light text-xs pt-1">Marketing Specialist</p>
-                                </div>
-                            </>
-                        )}
-                    </div>
-                </div>
+                <PeopleGrid />
             </section>
-        </>
+        </div>
     )
 }

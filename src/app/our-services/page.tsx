@@ -1,5 +1,4 @@
-"use client";
-
+import Link from 'next/link';
 import Image from "next/image";
 
 import { Hero } from "@/components/Hero";
@@ -23,23 +22,23 @@ import RightIcon from '../../assets/svg/icons/right_green.svg';
 import Percent1Icon from '../../assets/svg/icons/95_percent.svg';
 import Percent2Icon from '../../assets/svg/icons/85_percent.svg';
 
-import NattashaKelvin from '../../assets/svg/people/nattasha_kelvin.svg';
-import Cincinnati from '../../assets/svg/people/cincinnati.svg';
+import NattashaKelvin from '../../assets/jpeg/nattasha_kelvin.webp';
+import Cincinnati from '../../assets/jpeg/cincinnati.webp';
 import Stars from '../../assets/svg/icons/stars.svg';
 
-import './style.css';
+import styles from './style.module.css';
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export default function OurServices(){
     let widthValue = 'w-9/12'
 
     return (
-        <>
-            <Hero 
-                page="Our Services" 
+        <div className={styles.page}>
+            <Hero
+                page="Our Services"
                 title="We're Offering"
-                text={true} 
-                image={OurService} 
+                text={true}
+                image={OurService}
                 height="71.8%"
             />
             <ScrollToTop />
@@ -52,42 +51,42 @@ export default function OurServices(){
                             <h3 className="font-semibold text-lg">Financial Consultancy</h3>
                             <Image src={FinancialIcon} alt="Financial Consultancy"/>
                         </div>
-                        <span>Read more</span>
+                        <Link href="/our-services/financial-consultancy" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about financial consultancy">Read more</Link>
                     </div>
                     <div>
                         <div>
                             <h3 className="font-semibold text-lg">Business Management</h3>
                             <Image src={BusinessIcon} alt="Business Management"/>
                         </div>
-                        <span>Read more</span>       
+                        <Link href="/our-services/business-management" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about business management">Read more</Link>
                     </div>
                     <div>
                         <div>
                             <h3 className="font-semibold text-lg">Consultants & Programs</h3>
                             <Image src={ConsultantsIcon} alt="Consultants & Programs"/>
                         </div>
-                        <span>Read more</span> 
+                        <Link href="/our-services/consultancy-programs" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about consultancy programs">Read more</Link>
                     </div>
                     <div>
                         <div>
                             <h3 className="font-semibold text-lg">Company Management</h3>
                             <Image src={CompanyIcon} alt="Company Management"/>
                         </div>
-                        <span>Read more</span>
+                        <Link href="/our-services/company-management" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about company management">Read more</Link>
                     </div>
                     <div>
                         <div>
                             <h3 className="font-semibold text-lg w-full">Financial & Insurance jobs</h3>
                             <Image src={FinancialInsuranceIcon} alt="Financial & Insurance jobs"/>
                         </div>
-                        <span>Read more</span>
+                        <Link href="/our-services/insurance-finance" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about insurance finance">Read more</Link>
                     </div>
                     <div>
                         <div>
                             <h3 className="font-semibold text-lg">Banking Management</h3>
                             <Image src={BankingIcon} alt="Banking Management"/>
                         </div>
-                        <span>Read more</span>
+                        <Link href="/our-services/banking-management" className="inline-block px-4 py-3 text-indigo-700 font-semibold" aria-label="Read more about banking management">Read more</Link>
                     </div>
                 </div>
             </section>
@@ -207,7 +206,7 @@ export default function OurServices(){
                 <div className="testimonial-box">
                     <div className="box">
                         <div>
-                            <Image src={NattashaKelvin} alt="Nattasha"/>
+                            <Image src={NattashaKelvin} alt="Nattasha" width={101} height={101} sizes="101px"/>
                         </div>
                         <div>
                             <h4 className="font-bold pb-1">Nattasha Kelvin</h4>
@@ -224,7 +223,7 @@ export default function OurServices(){
                 <div className="testimonial-box">
                     <div className="box">
                         <div>
-                            <Image src={Cincinnati} alt="Cincinnati"/>
+                            <Image src={Cincinnati} alt="Cincinnati" width={101} height={101} sizes="101px"/>
                         </div>
                         <div>
                             <h4 className="font-bold pb-1">Cincinnati</h4>
@@ -239,6 +238,6 @@ export default function OurServices(){
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }

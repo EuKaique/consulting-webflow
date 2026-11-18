@@ -1,0 +1,182 @@
+
+.page :global(.grid-content){
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3%;
+    row-gap: 7%;
+    width: 60%;
+    margin: 0 auto;
+}
+.page :global(.grid-content img){
+    width: 100%;
+}
+.page :global(.grid-content-2){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 5%;
+}
+.page :global(.box-people){
+    margin-top: -6rem;
+    align-items: center;
+    background-color: #FFF;
+    position: relative;
+    padding: 1rem 0rem;
+    margin-left: 5%;
+    text-align: center;
+    width: 90%;
+}
+.page :global(.purple-bg){
+    transition: 0.3s;
+    filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
+    -webkit-filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
+    -moz-filter: sepia(100%) brightness(69%) hue-rotate(222deg) saturate(227%) opacity(72%) contrast(102%);
+    margin-top: -10%;
+}
+.page :global(.socials){
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 45%;
+    left: 30%;
+    top: 50%;
+    z-index: 99999;
+}
+.page :global(.socials li){
+    font-weight: bold;
+    background-color: #1fc098;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    padding: 0.2rem 0.2rem 0.2rem 0.4rem;
+    cursor: pointer;
+}
+.page :global(.socials li:first-child){
+    padding: 0.2rem 0.2rem 0.2rem 0.2rem;
+}
+.page :global(.socials img){
+    filter: invert(1);
+    width: 1.4rem;
+}
+.page :global(.bg-dark){
+    background-color: #37393F;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 425px){
+.page :global(.grid-content){
+        display: block;
+        margin-top: -35%;
+}
+.page :global(.grid-content div){
+        margin-bottom: 25%;
+}
+.page :global(.socials){
+        margin-bottom: -75%;
+        margin-top: 65%;
+}
+.page :global(.grid-content .box-people){
+        margin-top: -60%;
+        margin-bottom: 20%;
+}
+.page :global(.grid-content .box-people:nth-child(2)){
+        margin-top: -35%;
+        margin-bottom: 20%;
+}
+.page :global(.grid-content-2){
+        display: block;
+        margin-top: -25%;
+        margin-bottom: 10%;
+}
+}
+@media screen and (min-width: 1920px){
+.page :global(.grid-content-2){
+        width: 60%;
+        margin-left: 20%;
+}
+.page :global(.bg-dark){
+        padding: 5%;
+}
+.page :global(.bg-dark h6){
+        font-size: 1rem;
+}
+.page :global(.bg-dark h4){
+        font-size: 1.1rem;
+        font-weight: 600;
+}
+.page :global(.bg-dark h3){
+        font-size: 2rem;
+        padding: 1rem 0;
+}
+.page :global(.bg-dark p){
+        font-size: 0.9rem;
+}
+.page :global(.percent-class){
+        font-size: 2.5rem;
+        margin-bottom: 3%;
+}
+}
+@media screen and (min-width: 2560px){
+.page :global(.grid-content){
+        row-gap: 5%;
+        margin-bottom: 2%;
+}
+.page :global(.grid-content-2){
+        width: 68%;
+        margin-left: 20%;
+}
+.page :global(.bg-dark){
+        padding: 5%;
+}
+.page :global(.bg-dark h6){
+        font-size: 1rem;
+}
+.page :global(.bg-dark h4){
+        font-size: 1.1rem;
+        font-weight: 600;
+}
+.page :global(.bg-dark h3){
+        font-size: 2rem;
+        padding: 1rem 0;
+}
+.page :global(.bg-dark p){
+        font-size: 0.9rem;
+}
+.page :global(.percent-class){
+        font-size: 3rem;
+        margin-bottom: 5%;
+}
+}
+@media (min-width: 426px) and (max-width: 1024px) {
+.page :global(.grid-content){ grid-template-columns: repeat(2,minmax(0,1fr)); width: calc(100% - 2.5rem); padding: 0; gap: 1.5rem; margin: 2rem auto;
+}
+.page :global(.grid-content > *){ min-width: 0;
+}
+.page :global(.grid-content-1),.page :global(.grid-content-2){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 0 1.25rem; width: 100%;
+}
+.page :global(.grid-content-3),.page :global(.grid-content-4){ grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; padding: 2rem 1.25rem;
+}
+.page :global(.grid-content .box){ width: 100%; padding: 1.5rem;
+}
+.page :global(.flex-content){ width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.flex-content > div){ width: 48%;
+}
+.page :global(.testimonial){ grid-template-columns: minmax(0,1fr); width: calc(100% - 2.5rem); margin: 2rem auto;
+}
+.page :global(.testimonial-box){ margin: 1rem 0;
+}
+.page :global(.info){ flex-direction: column; gap: 1.5rem;
+}
+.page :global(.info div:first-child),.page :global(.info div:last-child){ width: 100%; margin-left: 0;
+}
+.page :global(.padding-x){ padding-left: 1.25rem; padding-right: 1.25rem;
+}
+}
+.page :global(.page-class),.page :global(.margin-top){ margin-top: 0;
+}
+@media (max-width: 425px) {
+.page :global(.grid-content),.page :global(.grid-content-1),.page :global(.grid-content-2),.page :global(.box-gray){ margin-top: 0;
+}
+}
+

@@ -1,9 +1,6 @@
-"use client";
-
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Header } from '@/components/Header';
-import { useRouter } from 'next/navigation';
 import { Footer } from '@/components/Footer';
 
 const poppins = Poppins({ 
@@ -18,8 +15,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const router = useRouter();
-
   return (
     <html lang="en">
       <head>
@@ -31,9 +26,11 @@ export default function RootLayout({
           <title>Consulting WebFlow</title>
       </head>
       <body className={poppins.className}>
-        <Header router={router} />
+        <div id="site-content">
+        <Header />
         {children}
         <Footer />
+        </div>
       </body>
     </html>
   )

@@ -1,0 +1,26 @@
+
+.page :global(.grid-content){ display: grid; grid-template-columns: minmax(12rem,1fr) minmax(0,2fr); gap: 2rem; width: min(75rem,calc(100% - 2.5rem)); margin: 0 auto;
+}
+.page :global(.grid-content > *){ min-width: 0;
+}
+.page :global(.box-gray){ background: #f1f1f1; padding: 1rem; align-self: start;
+}
+.page :global(.list-one li){ padding: .3rem; cursor: pointer;
+}
+.page :global(.list-one li:hover),.page :global(.active){ background: #6B78E5; color: #F4F4F4;
+}
+.page :global(.box-content){ min-width: 0; overflow-wrap: anywhere;
+}
+.page :global(.box-content .flex){ gap: .75rem;
+}
+@media (max-width: 767px) {
+.page :global(.grid-content){ grid-template-columns: minmax(0,1fr); gap: 1.5rem;
+}
+}
+.page :global(.page-class),.page :global(.margin-top){ margin-top: 0;
+}
+@media (max-width: 425px) {
+.page :global(.grid-content),.page :global(.grid-content-1),.page :global(.grid-content-2),.page :global(.box-gray){ margin-top: 0;
+}
+}
+

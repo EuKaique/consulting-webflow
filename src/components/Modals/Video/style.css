@@ -1,26 +1,9 @@
-video{
-    border-radius: 12px;
-}
 
-.video-modal{
-    position: absolute;
-    inset: 40px;
-    background: transparent;
-    padding-right: 20px;
-    width: 80%;
-    height: 99%;
-    margin-left: 8%;
-    text-align: end;
-    margin-top: -1%;
-}
-
-.video-modal > button{
-    padding-top: 0%;
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    font-size: 32px;
-    font-weight: 700;
-    color: #DDD;
-    z-index: 99999;
-}
+.presentation-overlay { position: fixed; inset: 0; background: rgba(15,23,42,.75); z-index: 100000; display: grid; place-items: center; padding: 1.25rem; }
+.presentation-modal { width: min(100%,44rem); max-height: calc(100dvh - 2.5rem); overflow-y: auto; padding: clamp(1.25rem,4vw,2.5rem); background: white; color: #37393f; border-radius: .5rem; }
+.presentation-modal h2 { font-size: clamp(1.5rem,3vw,2rem); font-weight: 700; line-height: 1.25; margin: 1rem 0; }
+.presentation-modal h3 { font-weight: 600; margin: 1rem 0 .5rem; }
+.presentation-modal p { font-size: .95rem; line-height: 1.8; margin-bottom: 1rem; }
+.presentation-modal ol { list-style: decimal; padding-left: 1.5rem; }
+.presentation-modal a { color: #454fc0; text-decoration: underline; }
+.presentation-close { display: block; margin-left: auto; padding: .5rem .75rem; border: 1px solid #454fc0; color: #454fc0; }

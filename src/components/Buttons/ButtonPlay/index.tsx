@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 
-import VideoModal from '../../Modals/Video';
+const VideoModal = dynamic(() => import('../../Modals/Video'), { ssr: false });
 
 import PlayIcon from '../../../assets/svg/icons/play.svg';
 
@@ -22,8 +23,8 @@ function ButtonPlay() {
     
     return ( 
         <>
-            <button onClick={handleOpenModal}><Image src={PlayIcon} alt="Play"/></button>
-            <VideoModal isOpen={isModalOpen} onClose={handleCloseModal} />
+            <button type="button" aria-label="Open presentation" aria-haspopup="dialog" aria-expanded={isModalOpen} onClick={handleOpenModal}><Image src={PlayIcon} alt=""/></button>
+            {isModalOpen && <VideoModal isOpen={isModalOpen} onClose={handleCloseModal} />}
         </>
     )
 }

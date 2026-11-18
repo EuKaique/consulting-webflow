@@ -1,88 +1,38 @@
-"use client";
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { Hero } from '@/components/Hero';
+import { articles } from '@/lib/articles';
+import BlogImage from '@/assets/png/blog/BlogImage.png';
+import styles from './style.module.css';
 
-import Image from "next/image";
-
-import { Hero } from "@/components/Hero";
-
-import BlogImage from '../../assets/png/blog/BlogImage.png';
-
-import ImageGrid1 from '../../assets/png/blog/ImageGrid1.png';
-import ImageGrid2 from '../../assets/png/blog/ImageGrid2.png';
-import ImageGrid3 from '../../assets/png/blog/ImageGrid3.png';
-import ImageGrid4 from '../../assets/png/blog/ImageGrid4.png';
-
-import './style.css';
-import { ScrollToTop } from "@/components/ScrollToTop";
-
-export default function Blog(){
-
-    return (
-        <>
-            <Hero
-                page="Recent News"
-                title="We Keep You Updated"
-                text={false}
-                height="71.8%" 
-                image={BlogImage}
-            />
-            <ScrollToTop />
-            <section>
-                <h6 className="font-semibold pb-2 text-center page-class text-slate-800">🟩 Our Recent News</h6>
-                <h2 className="text-slate-800 text-center pb-8 text-3xl font-semibold title-class">Featured News And Insights</h2>
-                <div className="grid-content">
-                    <div>
-                        <Image src={ImageGrid1} alt="Image 1" />
-                        <ul className="flex width-max">
-                            <li className="btn">July 26/2023</li>
-                            <li className="btn-green">Miranda Doe</li>
-                            <div className="border-right"></div>
-                            <li className="btn-green">Business</li>
-                        </ul>
-                        <h3 className="py-3 text-lg font-semibold">A Business Consulting That Can Produce</h3>
-                        <p className="text-gray-500 text-xs pb-3 w-11/12">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.</p>
-                        <span className="font-semibold text-indigo-600 py-4 text-sm">Read more</span>
-                    </div>
-                    <div>
-                        <Image src={ImageGrid2} alt="Image 2" />
-                        <ul className="flex width-max">
-                            <li className="btn">July 26/2023</li>
-                            <li className="btn-green">Miranda Doe</li>
-                            <div className="border-right"></div>
-                            <li className="btn-green">Business</li>
-                        </ul>
-                        <h3 className="py-3 text-lg font-semibold">Popular Email Marketing Techniques 2022</h3>
-                        <p className="text-gray-500 text-xs pb-3 w-11/12">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.</p>
-                        <span className="font-semibold text-indigo-600 py-4 text-sm">Read more</span>
-                    </div>
-                    <div>
-                        <Image src={ImageGrid3} alt="Image 3" />
-                        <ul className="flex width-max">
-                            <li className="btn">July 26/2023</li>
-                            <li className="btn-green">Miranda Doe</li>
-                            <div className="border-right"></div>
-                            <li className="btn-green">Business</li>
-                        </ul>
-                        <h3 className="py-3 text-lg font-semibold">What are backlinks and Why They are Important</h3>
-                        <p className="text-gray-500 text-xs pb-3 w-11/12">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.</p>
-                        <span className="font-semibold text-indigo-600 py-4 text-sm">Read more</span>
-                    </div>
-                    <div>
-                        <Image src={ImageGrid4} alt="Image 4" />
-                        <ul className="flex width-max">
-                            <li className="btn">July 26/2023</li>
-                            <li className="btn-green">Miranda Doe</li>
-                            <div className="border-right"></div>
-                            <li className="btn-green">Business</li>
-                        </ul>
-                        <h3 className="py-3 text-lg font-semibold">Importance of Keyword Research in a Blog</h3>
-                        <p className="text-gray-500 text-xs pb-3 w-11/12">Leverage agile frameworks to provide a robust synopsis for high level overviews.Iterative approaches to corporate strategy foster collaborative thinking.</p>
-                        <span className="font-semibold text-indigo-600 py-4 text-sm">Read more</span>
-                    </div>
-                </div>
-                <div className="flex justify-center pt-24 pb-24">
-                    <button className="btn font-light hover:opacity-75">Next &#10095;</button>
-                </div>
-            </section>
-        </>
-    )
+export default function Blog({ searchParams }: { searchParams: { page?: string } }) {
+  const page = searchParams.page === undefined ? 1 : Number(searchParams.page);
+  const pageSize = 2;
+  const pageCount = Math.ceil(articles.length / pageSize);
+  if (!Number.isInteger(page) || page < 1 || page > pageCount) notFound();
+  const visible = articles.slice((page - 1) * pageSize, page * pageSize);
+  return (
+    <main className={styles.page}>
+      <Hero page="Business insights" title="Ideas for your next decision" text={false} image={BlogImage} height="auto" />
+      <section aria-labelledby="insights-heading">
+        <h2 id="insights-heading" className="text-center font-bold text-3xl mb-8">Practical business insights</h2>
+        <div className="grid-content">
+          {visible.map(article => (
+            <article key={article.slug}>
+              <Image src={article.image} alt="" sizes="(max-width: 767px) 100vw, 50vw" />
+              <h3 className="py-3 text-xl font-semibold"><Link href={`/blog/${article.slug}`}>{article.title}</Link></h3>
+              <p className="text-slate-600 text-sm leading-relaxed mb-4">{article.summary}</p>
+              <Link className="font-semibold text-indigo-700 inline-block py-3" href={`/blog/${article.slug}`} aria-label={`Read more: ${article.title}`}>Read more →</Link>
+            </article>
+          ))}
+        </div>
+        <nav aria-label="Insights pagination" className="flex flex-wrap justify-center items-center gap-6 py-12">
+          {page > 1 && <Link className="btn" href={`/blog?page=${page - 1}`}>← Previous</Link>}
+          <span>Page {page} of {pageCount}</span>
+          {page < pageCount && <Link className="btn" href={`/blog?page=${page + 1}`}>Next →</Link>}
+        </nav>
+      </section>
+    </main>
+  );
 }

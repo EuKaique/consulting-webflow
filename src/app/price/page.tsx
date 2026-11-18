@@ -1,15 +1,14 @@
-"use client";
-
+import Link from 'next/link';
 import { Hero } from "@/components/Hero";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 import PriceImage from '../../assets/png/price/PriceImage.png';
 
-import './style.css';
+import styles from './style.module.css';
 
 export default function Price(){
     return (
-        <>
+        <div className={styles.page}>
             <Hero
                 page="Pricing Package"
                 title="Affordable Plans For Customers"
@@ -21,13 +20,14 @@ export default function Price(){
             <section>
                 <h6 className="font-semibold pb-2 text-center page-class">🟩 Single Pricing Option</h6>
                 <h2 className="text-center font-bold text-3xl w-4/12 mx-auto text-slate-800 title-class">Choose the Right Plan for Your and Your Team</h2>
+                <p className="text-center text-sm text-slate-600 mx-auto px-5 mb-6">Select a plan to send an enquiry. No payment is taken on this website.</p>
                 <div className="grid-content">
                     <div>
                         <h3 className="text-center text-lg font-bold">Basic</h3>
                         <div className="border-top"></div>
                         <h3 className="text-center pt-8 pb-2 font-bold text-2xl">$7.99<small className="text-sm">/ month</small></h3>
                         <div className="flex justify-center border-bottom pb-2">
-                            <button className="btn-green">Billed as $96 per year</button>
+                            <span className="btn-green">Billed as $96 per year</span>
                         </div>
                         <div className="flex justify-center">
                             <ul className="flex justify-center flex-col items-center py-4">
@@ -40,7 +40,7 @@ export default function Price(){
                             </ul>
                         </div>
                         <div className="flex justify-center pt-14">
-                            <button className="btn-purple">Get Started</button>
+                            <Link className="btn-purple" href="/contact-us?plan=basic#contact-form">Get Started</Link>
                         </div>
                     </div>
                     <div className="margin-top">
@@ -52,7 +52,7 @@ export default function Price(){
                             <div className="border-top-white"></div>
                             <h3 className="text-center pt-8 pb-2 font-bold text-2xl text-white">$9.99<small className="text-sm">/ month</small></h3>
                             <div className="flex justify-center border-bottom-white pb-2">
-                                <button className="btn-white">Billed as $119 per year</button>
+                                <span className="btn-white">Billed as $119 per year</span>
                             </div>
                             <div>
                                 <ul className="flex justify-center flex-col items-center py-4">
@@ -66,7 +66,7 @@ export default function Price(){
                                 </ul>
                             </div>
                             <div className="flex justify-center pt-8">
-                                <button className="btn-white-2">Get Started</button>
+                                <Link className="btn-white-2" href="/contact-us?plan=advanced#contact-form">Get Started</Link>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@ export default function Price(){
                         <div className="border-top"></div>
                         <h3 className="text-center pt-8 pb-2 font-bold text-2xl">$11.99<small className="text-sm">/ month</small></h3>
                         <div className="flex justify-center border-bottom pb-2">
-                            <button className="btn-green">Billed as $139 per year</button>
+                            <span className="btn-green">Billed as $139 per year</span>
                         </div>
                         <div className="flex justify-center">
                             <ul className="flex justify-center flex-col items-center py-4">
@@ -89,11 +89,11 @@ export default function Price(){
                             </ul>
                         </div>
                         <div className="flex justify-center pt-8">
-                            <button className="btn-purple">Get Started</button>
+                            <Link className="btn-purple" href="/contact-us?plan=pro#contact-form">Get Started</Link>
                         </div>
                     </div>
                 </div>
             </section>
-        </>
+        </div>
     )
 }
